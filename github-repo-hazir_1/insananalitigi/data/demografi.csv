@@ -1,0 +1,1471 @@
+﻿calisan_id,yas,ise_ulasim_mesafesi,egitim_duzeyi,egitim_alani,cinsiyet,medeni_durum
+1001,41,1,2,Yaşam Bilimleri,Kadın,Bekar
+1002,49,8,1,Yaşam Bilimleri,Erkek,Evli
+1003,37,2,2,Diğer,Erkek,Bekar
+1004,33,3,4,Yaşam Bilimleri,Kadın,Evli
+1005,27,2,1,Tıp,Erkek,Evli
+1006,32,2,2,Yaşam Bilimleri,Erkek,Bekar
+1007,59,3,3,Tıp,Kadın,Evli
+1008,30,24,1,Yaşam Bilimleri,Erkek,Boşanmış
+1009,38,23,3,Yaşam Bilimleri,Erkek,Bekar
+1010,36,27,3,Tıp,Erkek,Evli
+1011,35,16,3,Tıp,Erkek,Evli
+1012,29,15,2,Yaşam Bilimleri,Kadın,Bekar
+1013,31,26,1,Yaşam Bilimleri,Erkek,Boşanmış
+1014,34,19,2,Tıp,Erkek,Boşanmış
+1015,28,24,3,Yaşam Bilimleri,Erkek,Bekar
+1016,29,21,4,Yaşam Bilimleri,Kadın,Boşanmış
+1017,32,5,2,Yaşam Bilimleri,Erkek,Boşanmış
+1018,22,16,2,Tıp,Erkek,Boşanmış
+1019,53,2,4,Yaşam Bilimleri,Kadın,Evli
+1020,38,2,3,Yaşam Bilimleri,Erkek,Bekar
+1021,24,11,2,Diğer,Kadın,Boşanmış
+1022,36,9,4,Yaşam Bilimleri,Erkek,Bekar
+1023,34,7,4,Yaşam Bilimleri,Kadın,Bekar
+1024,21,15,2,Yaşam Bilimleri,Erkek,Bekar
+1025,34,6,1,Tıp,Erkek,Bekar
+1026,53,5,3,Diğer,Kadın,Boşanmış
+1027,32,16,1,Yaşam Bilimleri,Kadın,Bekar
+1028,42,8,4,Pazarlama,Erkek,Evli
+1029,44,7,4,Tıp,Kadın,Evli
+1030,46,2,4,Pazarlama,Kadın,Bekar
+1031,33,2,3,Tıp,Erkek,Bekar
+1032,44,10,4,Diğer,Erkek,Evli
+1033,30,9,2,Tıp,Erkek,Bekar
+1034,39,5,3,Teknik Diploma,Erkek,Evli
+1035,24,1,3,Tıp,Erkek,Evli
+1036,43,2,2,Tıp,Kadın,Boşanmış
+1037,50,3,2,Pazarlama,Erkek,Evli
+1038,35,2,3,Pazarlama,Kadın,Evli
+1039,36,5,4,Yaşam Bilimleri,Kadın,Evli
+1040,33,1,3,Yaşam Bilimleri,Kadın,Evli
+1041,35,4,2,Diğer,Erkek,Boşanmış
+1042,27,2,4,Yaşam Bilimleri,Kadın,Boşanmış
+1043,26,25,3,Yaşam Bilimleri,Erkek,Bekar
+1044,27,8,3,Yaşam Bilimleri,Erkek,Bekar
+1045,30,1,2,Tıp,Kadın,Bekar
+1046,41,12,3,Teknik Diploma,Kadın,Evli
+1047,34,23,4,Pazarlama,Erkek,Bekar
+1048,37,19,2,Yaşam Bilimleri,Erkek,Evli
+1049,46,5,4,Pazarlama,Erkek,Bekar
+1050,35,8,1,Yaşam Bilimleri,Erkek,Evli
+1051,48,1,2,Yaşam Bilimleri,Erkek,Bekar
+1052,28,5,4,Teknik Diploma,Erkek,Bekar
+1053,44,1,5,Pazarlama,Kadın,Boşanmış
+1054,35,11,2,Tıp,Erkek,Evli
+1055,26,23,3,Pazarlama,Kadın,Evli
+1056,33,1,2,Yaşam Bilimleri,Kadın,Bekar
+1057,35,18,5,Yaşam Bilimleri,Erkek,Evli
+1058,35,23,4,Tıp,Kadın,Evli
+1059,31,7,4,Yaşam Bilimleri,Erkek,Boşanmış
+1060,37,1,4,Yaşam Bilimleri,Erkek,Boşanmış
+1061,32,1,3,Tıp,Erkek,Evli
+1062,38,29,5,Yaşam Bilimleri,Kadın,Bekar
+1063,50,7,2,Tıp,Kadın,Boşanmış
+1064,59,25,3,Yaşam Bilimleri,Kadın,Bekar
+1065,36,8,3,Teknik Diploma,Kadın,Boşanmış
+1066,55,8,3,Tıp,Kadın,Boşanmış
+1067,36,11,3,Yaşam Bilimleri,Erkek,Bekar
+1068,45,7,3,Yaşam Bilimleri,Erkek,Boşanmış
+1069,35,1,3,Tıp,Erkek,Evli
+1070,36,9,3,Tıp,Erkek,Evli
+1071,59,1,1,Yaşam Bilimleri,Kadın,Bekar
+1072,29,2,3,Yaşam Bilimleri,Erkek,Evli
+1073,31,1,4,Tıp,Erkek,Bekar
+1074,32,1,3,Yaşam Bilimleri,Erkek,Evli
+1075,36,6,3,Yaşam Bilimleri,Kadın,Evli
+1076,31,8,4,Yaşam Bilimleri,Kadın,Bekar
+1077,35,1,4,Pazarlama,Erkek,Bekar
+1078,45,6,4,Diğer,Erkek,Evli
+1079,37,7,4,Tıp,Erkek,Bekar
+1080,46,5,2,Tıp,Erkek,Boşanmış
+1081,30,1,1,Yaşam Bilimleri,Erkek,Evli
+1082,35,1,3,Tıp,Erkek,Bekar
+1083,55,1,2,Yaşam Bilimleri,Erkek,Evli
+1084,38,6,3,Tıp,Kadın,Boşanmış
+1085,34,1,2,Tıp,Erkek,Evli
+1086,56,7,3,Yaşam Bilimleri,Erkek,Bekar
+1087,23,2,1,Teknik Diploma,Erkek,Boşanmış
+1088,51,9,4,Yaşam Bilimleri,Erkek,Evli
+1089,30,2,3,Yaşam Bilimleri,Erkek,Evli
+1090,46,9,2,Tıp,Erkek,Bekar
+1091,40,1,4,Yaşam Bilimleri,Erkek,Evli
+1092,51,21,4,Pazarlama,Erkek,Bekar
+1093,30,4,2,Tıp,Kadın,Boşanmış
+1094,46,1,3,Tıp,Erkek,Evli
+1095,32,6,4,Tıp,Erkek,Bekar
+1096,54,2,4,Teknik Diploma,Kadın,Evli
+1097,24,3,2,Diğer,Kadın,Evli
+1098,28,4,3,Tıp,Erkek,Evli
+1099,58,10,4,Tıp,Erkek,Bekar
+1100,44,23,3,Tıp,Erkek,Evli
+1101,37,6,4,İnsan Kaynakları,Erkek,Boşanmış
+1102,32,1,1,Yaşam Bilimleri,Erkek,Bekar
+1103,20,6,3,Yaşam Bilimleri,Kadın,Bekar
+1104,34,6,4,Diğer,Kadın,Bekar
+1105,37,2,2,Yaşam Bilimleri,Erkek,Boşanmış
+1106,59,2,4,İnsan Kaynakları,Kadın,Evli
+1107,50,1,3,Yaşam Bilimleri,Kadın,Evli
+1108,25,5,3,Pazarlama,Erkek,Bekar
+1109,25,7,1,Tıp,Erkek,Evli
+1110,22,15,3,Tıp,Kadın,Bekar
+1111,51,1,4,Tıp,Kadın,Bekar
+1112,34,7,3,Yaşam Bilimleri,Erkek,Bekar
+1113,54,26,3,İnsan Kaynakları,Kadın,Bekar
+1114,24,18,1,Yaşam Bilimleri,Erkek,Evli
+1115,34,6,4,Yaşam Bilimleri,Kadın,Boşanmış
+1116,37,3,3,Yaşam Bilimleri,Erkek,Bekar
+1117,34,5,3,Tıp,Kadın,Bekar
+1118,36,11,2,Teknik Diploma,Kadın,Evli
+1119,36,3,2,Yaşam Bilimleri,Kadın,Boşanmış
+1120,43,26,2,Yaşam Bilimleri,Erkek,Evli
+1121,30,23,3,Yaşam Bilimleri,Erkek,Boşanmış
+1122,33,22,2,Pazarlama,Erkek,Evli
+1123,56,14,4,Yaşam Bilimleri,Kadın,Evli
+1124,51,6,3,Yaşam Bilimleri,Erkek,Bekar
+1125,31,6,4,Yaşam Bilimleri,Erkek,Evli
+1126,26,6,3,Diğer,Kadın,Evli
+1127,58,23,4,Tıp,Kadın,Evli
+1128,19,22,1,Pazarlama,Erkek,Bekar
+1129,22,2,1,Teknik Diploma,Erkek,Evli
+1130,49,20,4,Tıp,Kadın,Evli
+1131,43,28,3,Tıp,Kadın,Bekar
+1132,50,12,3,Pazarlama,Kadın,Bekar
+1133,31,20,3,Yaşam Bilimleri,Kadın,Evli
+1134,41,9,1,Yaşam Bilimleri,Erkek,Boşanmış
+1135,26,25,1,Yaşam Bilimleri,Kadın,Evli
+1136,36,6,2,Tıp,Erkek,Boşanmış
+1137,51,8,4,Yaşam Bilimleri,Erkek,Bekar
+1138,39,4,4,Yaşam Bilimleri,Kadın,Evli
+1139,25,28,3,Yaşam Bilimleri,Erkek,Evli
+1140,30,9,3,İnsan Kaynakları,Erkek,Evli
+1141,32,9,3,Tıp,Kadın,Bekar
+1142,45,29,3,Tıp,Erkek,Bekar
+1143,38,3,5,Teknik Diploma,Kadın,Bekar
+1144,30,18,3,Yaşam Bilimleri,Kadın,Bekar
+1145,32,9,2,Tıp,Erkek,Boşanmış
+1146,30,5,3,Teknik Diploma,Kadın,Boşanmış
+1147,30,2,1,Tıp,Erkek,Bekar
+1148,41,10,3,Yaşam Bilimleri,Erkek,Boşanmış
+1149,41,9,4,Yaşam Bilimleri,Erkek,Evli
+1150,19,3,1,Tıp,Kadın,Bekar
+1151,40,26,3,Tıp,Kadın,Boşanmış
+1152,35,1,5,Pazarlama,Erkek,Evli
+1153,53,6,2,Pazarlama,Erkek,Evli
+1154,45,9,3,Yaşam Bilimleri,Erkek,Boşanmış
+1155,32,8,3,Pazarlama,Kadın,Bekar
+1156,29,1,1,Teknik Diploma,Erkek,Evli
+1157,51,7,4,Tıp,Erkek,Evli
+1158,58,9,3,Tıp,Kadın,Evli
+1159,40,4,4,Pazarlama,Erkek,Evli
+1160,34,2,4,Pazarlama,Kadın,Evli
+1161,22,19,1,Tıp,Erkek,Evli
+1162,27,9,3,Tıp,Erkek,Boşanmış
+1163,28,21,3,Tıp,Erkek,Evli
+1164,57,24,2,Yaşam Bilimleri,Erkek,Boşanmış
+1165,27,3,3,Tıp,Erkek,Boşanmış
+1166,50,11,3,Yaşam Bilimleri,Kadın,Bekar
+1167,41,14,3,Yaşam Bilimleri,Erkek,Boşanmış
+1168,30,5,3,Yaşam Bilimleri,Kadın,Evli
+1169,38,1,4,Yaşam Bilimleri,Kadın,Bekar
+1170,32,6,5,Yaşam Bilimleri,Erkek,Bekar
+1171,27,17,3,Teknik Diploma,Erkek,Evli
+1172,19,1,1,Teknik Diploma,Kadın,Bekar
+1173,36,3,2,Tıp,Erkek,Bekar
+1174,30,9,3,Tıp,Erkek,Boşanmış
+1175,45,4,2,Yaşam Bilimleri,Kadın,Boşanmış
+1176,56,8,3,Yaşam Bilimleri,Kadın,Boşanmış
+1177,33,2,3,Yaşam Bilimleri,Erkek,Bekar
+1178,19,2,3,Yaşam Bilimleri,Erkek,Bekar
+1179,46,1,2,Pazarlama,Kadın,Boşanmış
+1180,38,9,2,Yaşam Bilimleri,Kadın,Bekar
+1181,31,12,1,Tıp,Kadın,Evli
+1182,34,27,2,Tıp,Kadın,Bekar
+1183,41,20,2,Pazarlama,Kadın,Bekar
+1184,50,1,3,Tıp,Erkek,Evli
+1185,53,13,2,Tıp,Kadın,Boşanmış
+1186,33,14,3,Tıp,Kadın,Evli
+1187,40,4,1,Tıp,Kadın,Evli
+1188,55,14,4,Tıp,Erkek,Bekar
+1189,34,2,1,Yaşam Bilimleri,Erkek,Evli
+1190,51,3,3,Tıp,Kadın,Bekar
+1191,52,1,4,Yaşam Bilimleri,Erkek,Evli
+1192,27,9,3,Tıp,Kadın,Bekar
+1193,35,23,2,Yaşam Bilimleri,Erkek,Evli
+1194,43,7,3,Tıp,Erkek,Boşanmış
+1195,45,2,2,Tıp,Erkek,Evli
+1196,37,21,3,Yaşam Bilimleri,Erkek,Evli
+1197,35,2,3,Tıp,Kadın,Bekar
+1198,42,21,2,Tıp,Kadın,Boşanmış
+1199,38,2,4,Yaşam Bilimleri,Erkek,Evli
+1200,38,29,3,Teknik Diploma,Erkek,Evli
+1201,27,1,1,Teknik Diploma,Erkek,Evli
+1202,49,18,4,Yaşam Bilimleri,Erkek,Boşanmış
+1203,34,10,4,Tıp,Erkek,Boşanmış
+1204,40,19,2,Tıp,Erkek,Evli
+1205,38,29,1,Tıp,Erkek,Evli
+1206,29,27,3,Pazarlama,Kadın,Evli
+1207,22,5,3,Yaşam Bilimleri,Erkek,Boşanmış
+1208,36,18,1,Tıp,Kadın,Bekar
+1209,40,9,5,Yaşam Bilimleri,Erkek,Evli
+1210,46,1,4,Tıp,Erkek,Boşanmış
+1211,32,4,4,Tıp,Erkek,Evli
+1212,30,1,1,Yaşam Bilimleri,Erkek,Bekar
+1213,27,20,3,Yaşam Bilimleri,Kadın,Bekar
+1214,51,8,4,Yaşam Bilimleri,Erkek,Evli
+1215,30,3,3,Teknik Diploma,Kadın,Bekar
+1216,41,6,3,Yaşam Bilimleri,Kadın,Bekar
+1217,30,26,4,Pazarlama,Kadın,Bekar
+1218,29,1,3,Teknik Diploma,Erkek,Bekar
+1219,45,6,3,Tıp,Kadın,Bekar
+1220,54,3,3,Pazarlama,Kadın,Evli
+1221,36,5,2,Yaşam Bilimleri,Erkek,Bekar
+1222,33,4,4,Tıp,Kadın,Evli
+1223,37,11,3,Diğer,Erkek,Boşanmış
+1224,38,3,3,Yaşam Bilimleri,Erkek,Boşanmış
+1225,31,1,4,Tıp,Erkek,Evli
+1226,59,3,3,Yaşam Bilimleri,Erkek,Evli
+1227,37,4,4,Pazarlama,Erkek,Boşanmış
+1228,29,1,1,Tıp,Kadın,Evli
+1229,35,1,3,Pazarlama,Kadın,Bekar
+1230,29,18,1,Tıp,Erkek,Bekar
+1231,52,2,3,Yaşam Bilimleri,Kadın,Bekar
+1232,42,4,2,Teknik Diploma,Erkek,Evli
+1233,59,6,2,Tıp,Erkek,Evli
+1234,50,1,4,Tıp,Kadın,Boşanmış
+1235,33,14,3,Tıp,Erkek,Evli
+1236,43,16,3,Pazarlama,Kadın,Evli
+1237,33,2,2,Yaşam Bilimleri,Kadın,Evli
+1238,52,2,4,Yaşam Bilimleri,Erkek,Bekar
+1239,32,4,2,Yaşam Bilimleri,Kadın,Evli
+1240,32,1,3,Yaşam Bilimleri,Erkek,Bekar
+1241,39,1,4,Tıp,Kadın,Boşanmış
+1242,32,26,4,Pazarlama,Erkek,Evli
+1243,41,19,2,Yaşam Bilimleri,Erkek,Boşanmış
+1244,40,24,2,Teknik Diploma,Erkek,Boşanmış
+1245,45,1,3,Diğer,Erkek,Evli
+1246,31,3,4,Tıp,Erkek,Boşanmış
+1247,33,5,4,Yaşam Bilimleri,Kadın,Evli
+1248,34,2,4,Yaşam Bilimleri,Erkek,Evli
+1249,37,1,2,Tıp,Kadın,Evli
+1250,45,7,4,Yaşam Bilimleri,Erkek,Evli
+1251,37,10,3,Tıp,Erkek,Boşanmış
+1252,39,2,4,Teknik Diploma,Kadın,Bekar
+1253,29,15,3,Yaşam Bilimleri,Erkek,Bekar
+1254,42,17,2,Yaşam Bilimleri,Kadın,Bekar
+1255,29,20,2,Pazarlama,Erkek,Boşanmış
+1256,25,1,3,Yaşam Bilimleri,Kadın,Evli
+1257,42,2,3,Tıp,Kadın,Boşanmış
+1258,40,2,2,Tıp,Erkek,Boşanmış
+1259,51,1,3,Yaşam Bilimleri,Erkek,Evli
+1260,31,29,2,Tıp,Erkek,Bekar
+1261,32,7,3,Yaşam Bilimleri,Erkek,Evli
+1262,38,2,2,Yaşam Bilimleri,Erkek,Evli
+1263,32,2,1,Teknik Diploma,Erkek,Bekar
+1264,46,2,3,Teknik Diploma,Kadın,Evli
+1265,28,2,4,Yaşam Bilimleri,Erkek,Bekar
+1266,29,2,3,Tıp,Erkek,Evli
+1267,31,23,3,Tıp,Erkek,Evli
+1268,25,5,2,Yaşam Bilimleri,Erkek,Boşanmış
+1269,45,20,2,Tıp,Erkek,Evli
+1270,36,6,3,Yaşam Bilimleri,Erkek,Evli
+1271,55,1,3,Tıp,Erkek,Bekar
+1272,47,29,4,Yaşam Bilimleri,Erkek,Evli
+1273,28,9,3,Tıp,Erkek,Evli
+1274,37,6,4,Tıp,Erkek,Evli
+1275,21,3,2,Tıp,Erkek,Bekar
+1276,37,1,4,Tıp,Kadın,Boşanmış
+1277,35,22,3,Yaşam Bilimleri,Kadın,Boşanmış
+1278,38,7,2,Tıp,Kadın,Boşanmış
+1279,26,1,3,Yaşam Bilimleri,Kadın,Boşanmış
+1280,50,4,1,Yaşam Bilimleri,Erkek,Boşanmış
+1281,53,3,4,Tıp,Erkek,Evli
+1282,42,1,1,Yaşam Bilimleri,Erkek,Evli
+1283,29,2,2,Yaşam Bilimleri,Erkek,Bekar
+1284,55,20,2,Teknik Diploma,Erkek,Evli
+1285,26,11,2,Tıp,Erkek,Evli
+1286,37,1,3,Yaşam Bilimleri,Kadın,Bekar
+1287,44,24,3,Yaşam Bilimleri,Erkek,Boşanmış
+1288,38,23,4,Yaşam Bilimleri,Erkek,Boşanmış
+1289,26,16,4,Tıp,Erkek,Boşanmış
+1290,28,8,2,Yaşam Bilimleri,Kadın,Bekar
+1291,49,10,4,Yaşam Bilimleri,Kadın,Bekar
+1292,36,3,3,Teknik Diploma,Erkek,Bekar
+1293,31,5,3,Pazarlama,Kadın,Boşanmış
+1294,26,4,4,Pazarlama,Erkek,Bekar
+1295,37,9,3,Tıp,Erkek,Evli
+1296,42,26,3,Pazarlama,Kadın,Evli
+1297,18,3,3,Yaşam Bilimleri,Erkek,Bekar
+1298,35,16,3,Pazarlama,Erkek,Evli
+1299,36,18,4,Yaşam Bilimleri,Erkek,Evli
+1300,51,2,3,Tıp,Erkek,Boşanmış
+1301,41,2,4,Yaşam Bilimleri,Erkek,Bekar
+1302,18,10,3,Tıp,Kadın,Bekar
+1303,28,16,2,Tıp,Erkek,Bekar
+1304,31,7,3,Teknik Diploma,Erkek,Evli
+1305,39,1,3,Tıp,Erkek,Boşanmış
+1306,36,24,4,Yaşam Bilimleri,Kadın,Evli
+1307,32,7,3,Yaşam Bilimleri,Erkek,Evli
+1308,38,25,2,Yaşam Bilimleri,Kadın,Evli
+1309,58,1,4,Yaşam Bilimleri,Erkek,Boşanmış
+1310,31,5,4,Teknik Diploma,Erkek,Evli
+1311,31,2,3,İnsan Kaynakları,Erkek,Evli
+1312,45,7,3,Yaşam Bilimleri,Erkek,Boşanmış
+1313,31,2,4,Yaşam Bilimleri,Erkek,Boşanmış
+1314,33,5,4,Yaşam Bilimleri,Kadın,Evli
+1315,39,10,1,Tıp,Erkek,Evli
+1316,43,10,4,Yaşam Bilimleri,Kadın,Bekar
+1317,49,1,2,Teknik Diploma,Kadın,Bekar
+1318,52,8,4,Tıp,Erkek,Evli
+1319,27,5,3,Yaşam Bilimleri,Kadın,Bekar
+1320,32,8,2,Teknik Diploma,Kadın,Evli
+1321,27,2,3,Yaşam Bilimleri,Erkek,Bekar
+1322,31,7,3,Pazarlama,Erkek,Boşanmış
+1323,32,2,4,Tıp,Kadın,Bekar
+1324,28,2,4,Tıp,Erkek,Evli
+1325,30,28,2,Tıp,Kadın,Evli
+1326,31,7,2,Yaşam Bilimleri,Kadın,Evli
+1327,39,7,2,Tıp,Erkek,Evli
+1328,39,3,2,Tıp,Kadın,Evli
+1329,33,10,3,Pazarlama,Erkek,Bekar
+1330,47,5,5,Yaşam Bilimleri,Erkek,Evli
+1331,43,10,4,Yaşam Bilimleri,Kadın,Boşanmış
+1332,27,1,1,Pazarlama,Erkek,Evli
+1333,54,20,4,Yaşam Bilimleri,Kadın,Bekar
+1334,43,7,3,Yaşam Bilimleri,Kadın,Evli
+1335,45,8,4,Diğer,Erkek,Evli
+1336,40,1,2,Tıp,Erkek,Evli
+1337,29,8,4,Diğer,Erkek,Evli
+1338,29,9,5,Diğer,Erkek,Bekar
+1339,30,5,3,Pazarlama,Kadın,Boşanmış
+1340,27,8,4,Pazarlama,Kadın,Evli
+1341,37,5,2,Tıp,Erkek,Boşanmış
+1342,38,15,2,Yaşam Bilimleri,Erkek,Boşanmış
+1343,31,7,4,Tıp,Kadın,Bekar
+1344,29,10,1,Pazarlama,Kadın,Boşanmış
+1345,35,5,4,Teknik Diploma,Erkek,Bekar
+1346,23,26,1,Yaşam Bilimleri,Erkek,Boşanmış
+1347,41,6,3,Tıp,Erkek,Bekar
+1348,47,4,1,Tıp,Erkek,Bekar
+1349,42,23,5,Yaşam Bilimleri,Kadın,Bekar
+1350,29,2,3,Yaşam Bilimleri,Erkek,Evli
+1351,42,2,1,Teknik Diploma,Erkek,Boşanmış
+1352,32,2,3,Tıp,Kadın,Evli
+1353,48,29,1,Tıp,Kadın,Evli
+1354,37,6,3,Tıp,Erkek,Boşanmış
+1355,30,25,2,Teknik Diploma,Kadın,Evli
+1356,26,1,3,Yaşam Bilimleri,Erkek,Evli
+1357,42,2,4,Diğer,Erkek,Bekar
+1358,21,1,1,Teknik Diploma,Kadın,Bekar
+1359,36,1,5,Tıp,Kadın,Bekar
+1360,36,3,4,Tıp,Erkek,Evli
+1361,57,1,4,Tıp,Erkek,Evli
+1362,40,10,4,Yaşam Bilimleri,Kadın,Evli
+1363,21,9,2,Tıp,Erkek,Bekar
+1364,33,5,3,Pazarlama,Kadın,Bekar
+1365,37,10,3,Tıp,Kadın,Evli
+1366,46,7,4,Tıp,Kadın,Evli
+1367,41,4,3,Pazarlama,Erkek,Bekar
+1368,50,10,3,Teknik Diploma,Erkek,Bekar
+1369,40,22,2,Pazarlama,Erkek,Evli
+1370,31,9,4,Yaşam Bilimleri,Erkek,Bekar
+1371,21,12,3,Yaşam Bilimleri,Kadın,Bekar
+1372,29,23,3,Yaşam Bilimleri,Erkek,Bekar
+1373,35,9,4,Yaşam Bilimleri,Erkek,Bekar
+1374,27,1,2,Tıp,Erkek,Boşanmış
+1375,28,9,4,Yaşam Bilimleri,Erkek,Bekar
+1376,49,7,3,Diğer,Erkek,Bekar
+1377,51,14,2,Yaşam Bilimleri,Kadın,Evli
+1378,36,2,3,Yaşam Bilimleri,Kadın,Evli
+1379,34,19,3,Pazarlama,Erkek,Bekar
+1380,55,2,3,Yaşam Bilimleri,Kadın,Bekar
+1381,24,10,4,Pazarlama,Kadın,Boşanmış
+1382,30,2,1,Teknik Diploma,Erkek,Evli
+1383,26,3,1,Teknik Diploma,Erkek,Bekar
+1384,22,11,3,Tıp,Kadın,Evli
+1385,36,2,2,Tıp,Erkek,Evli
+1386,30,4,3,Teknik Diploma,Erkek,Bekar
+1387,37,14,3,Yaşam Bilimleri,Kadın,Boşanmış
+1388,40,2,2,Pazarlama,Kadın,Boşanmış
+1389,42,1,4,Yaşam Bilimleri,Kadın,Boşanmış
+1390,37,10,4,Yaşam Bilimleri,Erkek,Bekar
+1391,43,12,3,Yaşam Bilimleri,Erkek,Boşanmış
+1392,40,2,3,Tıp,Kadın,Evli
+1393,54,5,2,Tıp,Erkek,Evli
+1394,34,4,4,Pazarlama,Kadın,Evli
+1395,31,7,2,Tıp,Kadın,Evli
+1396,43,21,3,Tıp,Erkek,Evli
+1397,43,8,4,Diğer,Kadın,Boşanmış
+1398,25,4,2,Yaşam Bilimleri,Kadın,Bekar
+1399,37,25,5,Tıp,Kadın,Evli
+1400,31,1,2,Yaşam Bilimleri,Erkek,Evli
+1401,39,1,1,Yaşam Bilimleri,Erkek,Boşanmış
+1402,56,6,3,Yaşam Bilimleri,Kadın,Evli
+1403,30,12,3,Teknik Diploma,Kadın,Bekar
+1404,41,1,3,Pazarlama,Erkek,Evli
+1405,28,17,2,Tıp,Erkek,Boşanmış
+1406,25,3,3,Tıp,Erkek,Evli
+1407,52,3,3,Tıp,Erkek,Evli
+1408,45,10,2,Yaşam Bilimleri,Erkek,Evli
+1409,52,4,2,Yaşam Bilimleri,Kadın,Evli
+1410,42,29,2,Yaşam Bilimleri,Kadın,Boşanmış
+1411,30,2,3,Yaşam Bilimleri,Kadın,Bekar
+1412,60,7,3,Yaşam Bilimleri,Kadın,Evli
+1413,46,18,3,Tıp,Kadın,Boşanmış
+1414,42,28,4,Teknik Diploma,Kadın,Evli
+1415,24,1,1,Teknik Diploma,Kadın,Bekar
+1416,34,6,2,Pazarlama,Kadın,Boşanmış
+1417,38,2,2,Yaşam Bilimleri,Erkek,Evli
+1418,40,2,4,Yaşam Bilimleri,Kadın,Evli
+1419,26,23,3,Yaşam Bilimleri,Kadın,Boşanmış
+1420,30,3,3,Yaşam Bilimleri,Erkek,Evli
+1421,29,3,4,Tıp,Erkek,Evli
+1422,29,25,5,Teknik Diploma,Kadın,Evli
+1423,19,2,2,Teknik Diploma,Erkek,Bekar
+1424,30,22,4,Diğer,Kadın,Evli
+1425,57,29,3,Pazarlama,Erkek,Boşanmış
+1426,50,29,4,Yaşam Bilimleri,Erkek,Evli
+1427,30,2,3,Tıp,Kadın,Bekar
+1428,60,28,3,Pazarlama,Kadın,Evli
+1429,47,2,2,Tıp,Kadın,Boşanmış
+1430,46,2,3,Yaşam Bilimleri,Erkek,Evli
+1431,35,22,3,Yaşam Bilimleri,Erkek,Bekar
+1432,54,8,4,Yaşam Bilimleri,Kadın,Bekar
+1433,34,2,4,Yaşam Bilimleri,Erkek,Boşanmış
+1434,46,10,3,Pazarlama,Kadın,Evli
+1435,31,9,1,Yaşam Bilimleri,Erkek,Boşanmış
+1436,33,15,1,Tıp,Erkek,Evli
+1437,33,10,1,Tıp,Erkek,Boşanmış
+1438,30,7,1,Pazarlama,Erkek,Bekar
+1439,35,16,3,Yaşam Bilimleri,Erkek,Evli
+1440,31,20,3,Yaşam Bilimleri,Erkek,Evli
+1441,34,23,3,İnsan Kaynakları,Kadın,Boşanmış
+1442,42,5,2,Diğer,Erkek,Evli
+1443,36,10,4,Tıp,Erkek,Bekar
+1444,22,4,1,Teknik Diploma,Erkek,Bekar
+1445,48,2,5,Pazarlama,Kadın,Evli
+1446,55,18,5,Yaşam Bilimleri,Kadın,Bekar
+1447,41,10,2,Yaşam Bilimleri,Erkek,Bekar
+1448,35,1,3,Pazarlama,Erkek,Evli
+1449,40,6,3,Yaşam Bilimleri,Kadın,Bekar
+1450,39,8,1,Yaşam Bilimleri,Kadın,Evli
+1451,31,2,1,Yaşam Bilimleri,Erkek,Bekar
+1452,42,24,3,Tıp,Erkek,Evli
+1453,45,2,3,Diğer,Erkek,Evli
+1454,26,17,4,Yaşam Bilimleri,Kadın,Boşanmış
+1455,29,19,3,Teknik Diploma,Erkek,Boşanmış
+1456,33,1,5,Tıp,Kadın,Boşanmış
+1457,31,7,3,Yaşam Bilimleri,Erkek,Boşanmış
+1458,18,5,3,Pazarlama,Erkek,Bekar
+1459,40,28,3,Diğer,Erkek,Boşanmış
+1460,41,2,4,Diğer,Kadın,Bekar
+1461,26,29,2,Tıp,Erkek,Boşanmış
+1462,35,1,3,Tıp,Kadın,Bekar
+1463,34,21,4,Yaşam Bilimleri,Erkek,Bekar
+1464,26,24,3,Teknik Diploma,Erkek,Bekar
+1465,37,1,3,Teknik Diploma,Kadın,Bekar
+1466,46,18,1,Tıp,Kadın,Evli
+1467,41,2,5,Yaşam Bilimleri,Kadın,Evli
+1468,37,9,4,Tıp,Erkek,Boşanmış
+1469,52,6,2,Teknik Diploma,Erkek,Boşanmış
+1470,32,11,4,Diğer,Erkek,Evli
+1471,24,24,3,Tıp,Erkek,Evli
+1472,38,10,3,Tıp,Kadın,Evli
+1473,37,1,4,Yaşam Bilimleri,Kadın,Evli
+1474,49,18,4,Yaşam Bilimleri,Erkek,Boşanmış
+1475,24,23,3,Tıp,Erkek,Evli
+1476,26,28,2,Pazarlama,Erkek,Evli
+1477,24,17,2,Diğer,Erkek,Evli
+1478,50,3,3,Tıp,Erkek,Evli
+1479,25,13,1,Tıp,Erkek,Evli
+1480,24,7,3,Yaşam Bilimleri,Kadın,Evli
+1481,30,12,4,Yaşam Bilimleri,Erkek,Evli
+1482,34,1,2,Yaşam Bilimleri,Erkek,Evli
+1483,31,13,4,Tıp,Erkek,Boşanmış
+1484,35,25,2,Diğer,Erkek,Bekar
+1485,31,6,4,Tıp,Erkek,Boşanmış
+1486,27,6,4,Tıp,Kadın,Boşanmış
+1487,37,2,3,Pazarlama,Erkek,Evli
+1488,20,1,3,Yaşam Bilimleri,Kadın,Bekar
+1489,42,2,4,Yaşam Bilimleri,Kadın,Evli
+1490,43,6,4,Diğer,Erkek,Boşanmış
+1491,38,1,1,Yaşam Bilimleri,Kadın,Bekar
+1492,43,9,5,Tıp,Erkek,Boşanmış
+1493,48,1,4,Yaşam Bilimleri,Kadın,Evli
+1494,44,1,4,Yaşam Bilimleri,Kadın,Bekar
+1495,34,14,3,Teknik Diploma,Kadın,Boşanmış
+1496,27,2,1,Pazarlama,Erkek,Boşanmış
+1497,21,22,1,Teknik Diploma,Erkek,Bekar
+1498,44,3,4,Diğer,Erkek,Evli
+1499,22,6,1,Tıp,Erkek,Evli
+1500,33,8,4,Pazarlama,Erkek,Boşanmış
+1501,32,9,4,Yaşam Bilimleri,Kadın,Evli
+1502,30,3,3,Tıp,Kadın,Boşanmış
+1503,53,1,1,Tıp,Kadın,Bekar
+1504,34,1,5,Yaşam Bilimleri,Erkek,Evli
+1505,45,26,4,Yaşam Bilimleri,Kadın,Evli
+1506,26,6,3,Yaşam Bilimleri,Kadın,Evli
+1507,37,3,3,Diğer,Erkek,Evli
+1508,29,3,2,Tıp,Kadın,Evli
+1509,35,6,4,Yaşam Bilimleri,Erkek,Bekar
+1510,33,6,3,Yaşam Bilimleri,Erkek,Boşanmış
+1511,54,19,4,Tıp,Erkek,Evli
+1512,36,9,2,Tıp,Erkek,Boşanmış
+1513,27,3,4,Tıp,Erkek,Bekar
+1514,20,10,1,Tıp,Erkek,Bekar
+1515,33,3,3,Yaşam Bilimleri,Erkek,Bekar
+1516,35,3,3,Yaşam Bilimleri,Erkek,Evli
+1517,23,4,3,Tıp,Erkek,Evli
+1518,25,8,3,Yaşam Bilimleri,Erkek,Evli
+1519,38,7,4,Pazarlama,Kadın,Bekar
+1520,29,1,4,Yaşam Bilimleri,Erkek,Boşanmış
+1521,48,2,1,Pazarlama,Erkek,Evli
+1522,27,3,1,Tıp,Kadın,Boşanmış
+1523,37,10,2,Yaşam Bilimleri,Erkek,Bekar
+1524,50,28,1,Tıp,Erkek,Evli
+1525,34,9,3,Tıp,Kadın,Bekar
+1526,24,3,2,Yaşam Bilimleri,Kadın,Bekar
+1527,39,2,4,Teknik Diploma,Kadın,Bekar
+1528,32,10,3,Pazarlama,Erkek,Bekar
+1529,50,8,2,Teknik Diploma,Erkek,Evli
+1530,38,1,4,Yaşam Bilimleri,Kadın,Bekar
+1531,27,1,2,Yaşam Bilimleri,Kadın,Evli
+1532,32,3,2,Yaşam Bilimleri,Kadın,Bekar
+1533,47,14,4,Pazarlama,Erkek,Bekar
+1534,40,5,4,Yaşam Bilimleri,Erkek,Evli
+1535,53,7,3,Yaşam Bilimleri,Erkek,Evli
+1536,41,10,4,İnsan Kaynakları,Erkek,Boşanmış
+1537,60,16,4,Pazarlama,Erkek,Bekar
+1538,27,10,2,Yaşam Bilimleri,Erkek,Boşanmış
+1539,41,1,3,İnsan Kaynakları,Erkek,Evli
+1540,50,8,4,Pazarlama,Erkek,Evli
+1541,28,1,2,Yaşam Bilimleri,Kadın,Bekar
+1542,36,8,3,Yaşam Bilimleri,Kadın,Evli
+1543,38,1,3,Yaşam Bilimleri,Kadın,Bekar
+1544,44,24,3,Tıp,Erkek,Bekar
+1545,47,3,3,Tıp,Kadın,Boşanmış
+1546,30,27,5,Pazarlama,Erkek,Boşanmış
+1547,29,10,3,Yaşam Bilimleri,Erkek,Bekar
+1548,42,19,3,Tıp,Erkek,Boşanmış
+1549,43,15,3,Yaşam Bilimleri,Erkek,Evli
+1550,34,8,2,Tıp,Kadın,Bekar
+1551,23,9,1,Tıp,Erkek,Evli
+1552,39,3,3,İnsan Kaynakları,Kadın,Evli
+1553,56,9,3,Tıp,Erkek,Evli
+1554,40,2,1,Tıp,Kadın,Bekar
+1555,27,7,3,Tıp,Kadın,Bekar
+1556,29,10,3,Pazarlama,Erkek,Boşanmış
+1557,53,6,3,Yaşam Bilimleri,Erkek,Bekar
+1558,35,2,4,Yaşam Bilimleri,Kadın,Boşanmış
+1559,32,24,4,Yaşam Bilimleri,Erkek,Evli
+1560,38,2,5,Tıp,Erkek,Evli
+1561,34,8,5,Yaşam Bilimleri,Kadın,Boşanmış
+1562,52,3,4,Pazarlama,Erkek,Evli
+1563,33,1,4,Diğer,Erkek,Bekar
+1564,25,26,1,Tıp,Kadın,Bekar
+1565,45,2,2,Teknik Diploma,Erkek,Bekar
+1566,23,10,1,Tıp,Erkek,Bekar
+1567,47,27,2,Yaşam Bilimleri,Kadın,Bekar
+1568,34,2,3,Diğer,Erkek,Bekar
+1569,55,2,3,Tıp,Erkek,Evli
+1570,36,8,4,Yaşam Bilimleri,Erkek,Bekar
+1571,52,19,4,Tıp,Erkek,Evli
+1572,26,1,2,Yaşam Bilimleri,Kadın,Boşanmış
+1573,29,27,3,Tıp,Kadın,Evli
+1574,26,8,3,Teknik Diploma,Erkek,Bekar
+1575,34,1,4,Yaşam Bilimleri,Kadın,Bekar
+1576,54,19,4,Tıp,Kadın,Boşanmış
+1577,27,8,1,Pazarlama,Erkek,Evli
+1578,37,10,1,Yaşam Bilimleri,Kadın,Boşanmış
+1579,38,2,4,Yaşam Bilimleri,Kadın,Bekar
+1580,34,2,4,Tıp,Kadın,Bekar
+1581,35,8,4,Yaşam Bilimleri,Kadın,Evli
+1582,30,1,3,Yaşam Bilimleri,Erkek,Evli
+1583,40,2,2,Tıp,Kadın,Evli
+1584,34,8,2,Yaşam Bilimleri,Kadın,Evli
+1585,42,8,3,Yaşam Bilimleri,Erkek,Boşanmış
+1586,23,6,3,Yaşam Bilimleri,Erkek,Evli
+1587,24,9,3,Yaşam Bilimleri,Erkek,Boşanmış
+1588,52,11,4,Yaşam Bilimleri,Kadın,Evli
+1589,50,2,3,Tıp,Erkek,Evli
+1590,29,1,2,Yaşam Bilimleri,Kadın,Evli
+1591,33,7,3,Tıp,Erkek,Evli
+1592,33,16,3,Pazarlama,Kadın,Bekar
+1593,47,2,2,Diğer,Kadın,Evli
+1594,36,1,3,Diğer,Kadın,Evli
+1595,29,23,2,Yaşam Bilimleri,Erkek,Evli
+1596,58,2,4,Yaşam Bilimleri,Erkek,Bekar
+1597,35,1,4,Yaşam Bilimleri,Kadın,Bekar
+1598,42,1,2,Yaşam Bilimleri,Kadın,Evli
+1599,28,2,4,Tıp,Erkek,Bekar
+1600,36,13,3,İnsan Kaynakları,Erkek,Evli
+1601,32,4,3,Yaşam Bilimleri,Kadın,Evli
+1602,40,16,4,Tıp,Erkek,Bekar
+1603,30,2,3,Tıp,Kadın,Bekar
+1604,45,2,3,Yaşam Bilimleri,Kadın,Bekar
+1605,42,29,3,Yaşam Bilimleri,Erkek,Evli
+1606,38,12,3,Yaşam Bilimleri,Erkek,Boşanmış
+1607,34,16,4,Yaşam Bilimleri,Kadın,Bekar
+1608,49,11,3,Pazarlama,Kadın,Evli
+1609,55,2,1,Tıp,Erkek,Bekar
+1610,43,14,2,Yaşam Bilimleri,Erkek,Evli
+1611,27,5,1,Teknik Diploma,Erkek,Boşanmış
+1612,35,7,3,Diğer,Erkek,Bekar
+1613,28,2,4,Pazarlama,Kadın,Evli
+1614,34,3,2,İnsan Kaynakları,Erkek,Evli
+1615,26,5,2,Tıp,Kadın,Evli
+1616,27,3,3,Tıp,Erkek,Evli
+1617,51,26,4,Pazarlama,Kadın,Evli
+1618,44,4,3,Tıp,Erkek,Bekar
+1619,25,2,1,Tıp,Erkek,Bekar
+1620,33,1,3,Tıp,Erkek,Boşanmış
+1621,35,27,1,Tıp,Kadın,Bekar
+1622,36,1,2,Yaşam Bilimleri,Erkek,Evli
+1623,32,13,4,Yaşam Bilimleri,Erkek,Boşanmış
+1624,30,5,4,Yaşam Bilimleri,Erkek,Boşanmış
+1625,53,7,2,Pazarlama,Kadın,Evli
+1626,45,9,3,Pazarlama,Erkek,Boşanmış
+1627,32,8,2,Tıp,Kadın,Evli
+1628,52,25,4,Tıp,Kadın,Evli
+1629,37,16,4,Pazarlama,Erkek,Boşanmış
+1630,28,8,2,Tıp,Erkek,Boşanmış
+1631,22,1,2,Yaşam Bilimleri,Erkek,Evli
+1632,44,8,4,Yaşam Bilimleri,Erkek,Evli
+1633,42,2,1,Tıp,Erkek,Bekar
+1634,36,8,3,Yaşam Bilimleri,Erkek,Evli
+1635,25,3,1,Diğer,Erkek,Evli
+1636,35,9,3,Yaşam Bilimleri,Kadın,Evli
+1637,35,25,4,Yaşam Bilimleri,Kadın,Boşanmış
+1638,32,1,3,Yaşam Bilimleri,Erkek,Boşanmış
+1639,25,4,1,Pazarlama,Erkek,Evli
+1640,49,1,3,Teknik Diploma,Kadın,Evli
+1641,24,4,1,Yaşam Bilimleri,Erkek,Evli
+1642,32,5,2,Yaşam Bilimleri,Erkek,Evli
+1643,38,9,3,Pazarlama,Erkek,Evli
+1644,42,3,3,Yaşam Bilimleri,Kadın,Evli
+1645,31,11,4,Yaşam Bilimleri,Erkek,Evli
+1646,29,1,3,Tıp,Kadın,Boşanmış
+1647,53,8,3,Pazarlama,Erkek,Evli
+1648,35,25,3,Teknik Diploma,Erkek,Evli
+1649,37,21,2,Tıp,Kadın,Evli
+1650,53,23,4,Yaşam Bilimleri,Kadın,Bekar
+1651,43,1,3,Yaşam Bilimleri,Kadın,Evli
+1652,47,2,2,Pazarlama,Kadın,Evli
+1653,37,19,2,Tıp,Erkek,Bekar
+1654,50,2,4,Yaşam Bilimleri,Erkek,Boşanmış
+1655,39,2,3,Yaşam Bilimleri,Kadın,Evli
+1656,33,3,2,İnsan Kaynakları,Erkek,Boşanmış
+1657,32,25,4,Yaşam Bilimleri,Erkek,Bekar
+1658,29,7,1,Tıp,Kadın,Boşanmış
+1659,44,9,2,Yaşam Bilimleri,Erkek,Evli
+1660,28,5,4,Tıp,Erkek,Bekar
+1661,58,2,1,Yaşam Bilimleri,Erkek,Boşanmış
+1662,43,8,3,Yaşam Bilimleri,Kadın,Boşanmış
+1663,20,2,3,Tıp,Kadın,Bekar
+1664,21,18,1,Diğer,Kadın,Bekar
+1665,36,14,1,Yaşam Bilimleri,Erkek,Evli
+1666,47,2,4,Yaşam Bilimleri,Kadın,Bekar
+1667,22,3,1,Yaşam Bilimleri,Kadın,Evli
+1668,41,2,4,Yaşam Bilimleri,Kadın,Boşanmış
+1669,28,9,3,Tıp,Kadın,Boşanmış
+1670,39,6,3,Tıp,Erkek,Evli
+1671,27,4,3,Yaşam Bilimleri,Kadın,Bekar
+1672,34,10,3,Yaşam Bilimleri,Erkek,Boşanmış
+1673,42,14,2,Tıp,Kadın,Bekar
+1674,33,1,4,Diğer,Erkek,Bekar
+1675,58,5,3,Teknik Diploma,Kadın,Boşanmış
+1676,31,7,4,Yaşam Bilimleri,Erkek,Evli
+1677,35,21,1,Yaşam Bilimleri,Kadın,Evli
+1678,49,8,2,Diğer,Kadın,Evli
+1679,48,20,4,Tıp,Erkek,Evli
+1680,31,20,2,Pazarlama,Kadın,Evli
+1681,36,7,4,Diğer,Erkek,Bekar
+1682,38,1,3,Teknik Diploma,Kadın,Evli
+1683,32,1,3,Yaşam Bilimleri,Kadın,Evli
+1684,25,19,2,Pazarlama,Erkek,Evli
+1685,40,10,4,Pazarlama,Erkek,Boşanmış
+1686,26,1,3,Tıp,Erkek,Bekar
+1687,41,6,3,Tıp,Erkek,Bekar
+1688,36,2,4,Tıp,Erkek,Bekar
+1689,19,21,3,Diğer,Erkek,Bekar
+1690,20,4,3,Teknik Diploma,Erkek,Bekar
+1691,31,12,3,Tıp,Kadın,Evli
+1692,40,9,4,Tıp,Erkek,Boşanmış
+1693,32,3,4,Tıp,Kadın,Evli
+1694,36,3,1,Yaşam Bilimleri,Erkek,Evli
+1695,33,1,3,Yaşam Bilimleri,Kadın,Bekar
+1696,37,1,4,Yaşam Bilimleri,Erkek,Evli
+1697,45,4,2,Yaşam Bilimleri,Erkek,Evli
+1698,29,20,3,Teknik Diploma,Kadın,Evli
+1699,35,18,3,Tıp,Kadın,Evli
+1700,52,1,2,Yaşam Bilimleri,Erkek,Evli
+1701,58,2,3,Teknik Diploma,Erkek,Bekar
+1702,53,2,2,Tıp,Erkek,Boşanmış
+1703,30,8,2,Diğer,Erkek,Boşanmış
+1704,38,10,3,Teknik Diploma,Kadın,Bekar
+1705,35,3,4,Yaşam Bilimleri,Erkek,Boşanmış
+1706,39,2,5,Yaşam Bilimleri,Erkek,Bekar
+1707,40,24,3,Yaşam Bilimleri,Kadın,Bekar
+1708,47,16,4,Tıp,Erkek,Boşanmış
+1709,36,8,4,Teknik Diploma,Erkek,Boşanmış
+1710,31,9,2,Tıp,Erkek,Bekar
+1711,33,17,3,Yaşam Bilimleri,Erkek,Bekar
+1712,29,10,3,Yaşam Bilimleri,Kadın,Bekar
+1713,33,13,1,Yaşam Bilimleri,Kadın,Bekar
+1714,45,1,4,Tıp,Kadın,Boşanmış
+1715,50,1,2,Tıp,Erkek,Boşanmış
+1716,33,1,4,Diğer,Kadın,Evli
+1717,41,9,3,Tıp,Erkek,Boşanmış
+1718,27,16,4,Teknik Diploma,Kadın,Evli
+1719,45,23,2,Yaşam Bilimleri,Erkek,Evli
+1720,47,4,2,Yaşam Bilimleri,Kadın,Bekar
+1721,30,22,3,Yaşam Bilimleri,Kadın,Evli
+1722,50,24,3,Yaşam Bilimleri,Erkek,Evli
+1723,38,10,1,Tıp,Erkek,Evli
+1724,46,7,2,Tıp,Erkek,Boşanmış
+1725,24,17,1,Tıp,Kadın,Boşanmış
+1726,35,14,4,Diğer,Erkek,Boşanmış
+1727,31,1,1,Yaşam Bilimleri,Kadın,Evli
+1728,18,5,2,Yaşam Bilimleri,Erkek,Bekar
+1729,54,17,3,Teknik Diploma,Kadın,Evli
+1730,35,25,4,Tıp,Kadın,Boşanmış
+1731,30,8,2,Yaşam Bilimleri,Kadın,Evli
+1732,20,11,3,Tıp,Kadın,Bekar
+1733,30,5,3,Tıp,Kadın,Bekar
+1734,26,2,2,Tıp,Erkek,Evli
+1735,22,8,1,Yaşam Bilimleri,Erkek,Evli
+1736,48,6,3,Yaşam Bilimleri,Erkek,Bekar
+1737,48,4,4,Yaşam Bilimleri,Erkek,Bekar
+1738,41,7,2,Tıp,Kadın,Bekar
+1739,39,1,1,Yaşam Bilimleri,Kadın,Evli
+1740,27,2,4,Yaşam Bilimleri,Kadın,Evli
+1741,35,10,3,Diğer,Erkek,Boşanmış
+1742,42,5,2,Pazarlama,Erkek,Evli
+1743,50,9,3,Yaşam Bilimleri,Erkek,Evli
+1744,59,2,3,Yaşam Bilimleri,Kadın,Bekar
+1745,37,11,2,Tıp,Kadın,Evli
+1746,55,18,4,Tıp,Erkek,Evli
+1747,41,7,1,Yaşam Bilimleri,Kadın,Boşanmış
+1748,38,3,4,Yaşam Bilimleri,Erkek,Bekar
+1749,26,29,2,Tıp,Erkek,Bekar
+1750,52,2,1,Pazarlama,Kadın,Evli
+1751,44,28,3,Tıp,Kadın,Evli
+1752,50,1,3,Yaşam Bilimleri,Kadın,Evli
+1753,36,16,4,Yaşam Bilimleri,Kadın,Bekar
+1754,39,22,3,Tıp,Kadın,Bekar
+1755,33,8,1,Yaşam Bilimleri,Kadın,Bekar
+1756,45,11,2,Yaşam Bilimleri,Kadın,Evli
+1757,32,29,4,Tıp,Kadın,Bekar
+1758,34,1,4,Pazarlama,Erkek,Boşanmış
+1759,59,1,2,Teknik Diploma,Erkek,Evli
+1760,45,24,4,Tıp,Erkek,Bekar
+1761,53,2,3,Pazarlama,Kadın,Evli
+1762,36,15,3,Diğer,Erkek,Boşanmış
+1763,26,2,3,Yaşam Bilimleri,Erkek,Evli
+1764,34,10,4,Yaşam Bilimleri,Kadın,Evli
+1765,28,10,1,Tıp,Erkek,Evli
+1766,38,3,4,Diğer,Erkek,Evli
+1767,50,2,4,Tıp,Erkek,Evli
+1768,37,3,3,Diğer,Kadın,Bekar
+1769,40,26,3,Pazarlama,Erkek,Evli
+1770,26,1,1,Tıp,Kadın,Boşanmış
+1771,46,1,4,Tıp,Erkek,Boşanmış
+1772,54,2,4,Yaşam Bilimleri,Kadın,Evli
+1773,56,9,3,Tıp,Kadın,Evli
+1774,36,12,5,Tıp,Kadın,Bekar
+1775,55,2,1,Tıp,Erkek,Bekar
+1776,43,25,3,Tıp,Erkek,Boşanmış
+1777,20,9,3,Pazarlama,Kadın,Bekar
+1778,21,10,3,Yaşam Bilimleri,Kadın,Bekar
+1779,46,8,4,Yaşam Bilimleri,Kadın,Boşanmış
+1780,51,4,4,Yaşam Bilimleri,Erkek,Evli
+1781,28,24,2,Teknik Diploma,Erkek,Bekar
+1782,26,1,2,Tıp,Erkek,Evli
+1783,30,20,3,Diğer,Erkek,Evli
+1784,41,7,2,Teknik Diploma,Kadın,Evli
+1785,38,17,1,Yaşam Bilimleri,Kadın,Evli
+1786,40,20,4,Teknik Diploma,Erkek,Evli
+1787,27,8,5,Yaşam Bilimleri,Erkek,Evli
+1788,55,2,1,Yaşam Bilimleri,Erkek,Evli
+1789,28,10,3,Diğer,Kadın,Bekar
+1790,44,1,2,Tıp,Erkek,Evli
+1791,33,5,3,Yaşam Bilimleri,Erkek,Boşanmış
+1792,35,4,3,Teknik Diploma,Erkek,Bekar
+1793,33,29,4,Tıp,Kadın,Bekar
+1794,28,15,2,Yaşam Bilimleri,Erkek,Boşanmış
+1795,34,3,1,Yaşam Bilimleri,Erkek,Bekar
+1796,37,10,4,Yaşam Bilimleri,Kadın,Boşanmış
+1797,25,4,1,Teknik Diploma,Erkek,Evli
+1798,26,21,3,Tıp,Erkek,Boşanmış
+1799,33,25,3,Tıp,Erkek,Bekar
+1800,42,2,2,Tıp,Erkek,Evli
+1801,28,1,3,Tıp,Erkek,Boşanmış
+1802,50,1,4,Diğer,Erkek,Bekar
+1803,33,7,3,Yaşam Bilimleri,Kadın,Evli
+1804,34,3,4,Yaşam Bilimleri,Erkek,Evli
+1805,48,1,4,Tıp,Erkek,Bekar
+1806,45,9,4,Yaşam Bilimleri,Kadın,Evli
+1807,52,7,4,Yaşam Bilimleri,Erkek,Bekar
+1808,38,10,4,Pazarlama,Erkek,Boşanmış
+1809,29,28,4,Yaşam Bilimleri,Kadın,Boşanmış
+1810,28,3,3,Tıp,Kadın,Boşanmış
+1811,46,3,1,Pazarlama,Erkek,Evli
+1812,38,2,2,Pazarlama,Erkek,Bekar
+1813,43,27,3,Yaşam Bilimleri,Kadın,Evli
+1814,39,2,3,Yaşam Bilimleri,Erkek,Boşanmış
+1815,40,14,3,Tıp,Erkek,Bekar
+1816,21,1,1,Teknik Diploma,Kadın,Bekar
+1817,39,9,3,Yaşam Bilimleri,Erkek,Bekar
+1818,36,18,4,Yaşam Bilimleri,Erkek,Bekar
+1819,31,20,3,Yaşam Bilimleri,Erkek,Evli
+1820,28,2,1,Yaşam Bilimleri,Erkek,Evli
+1821,35,11,2,Pazarlama,Erkek,Boşanmış
+1822,49,8,4,Teknik Diploma,Erkek,Evli
+1823,34,2,2,Yaşam Bilimleri,Erkek,Bekar
+1824,29,10,3,Yaşam Bilimleri,Kadın,Boşanmış
+1825,42,29,3,Tıp,Erkek,Bekar
+1826,29,8,1,Tıp,Erkek,Evli
+1827,38,1,3,İnsan Kaynakları,Erkek,Evli
+1828,28,6,3,Yaşam Bilimleri,Erkek,Boşanmış
+1829,18,8,1,Tıp,Erkek,Bekar
+1830,33,9,4,Pazarlama,Kadın,Bekar
+1831,41,12,4,Yaşam Bilimleri,Erkek,Evli
+1832,31,15,3,Tıp,Erkek,Evli
+1833,37,25,2,Tıp,Kadın,Boşanmış
+1834,27,6,3,Yaşam Bilimleri,Erkek,Evli
+1835,34,9,1,Yaşam Bilimleri,Kadın,Evli
+1836,35,8,4,Teknik Diploma,Erkek,Bekar
+1837,29,23,1,Yaşam Bilimleri,Kadın,Evli
+1838,40,9,4,Tıp,Kadın,Bekar
+1839,42,12,3,Yaşam Bilimleri,Erkek,Bekar
+1840,42,4,4,Pazarlama,Erkek,Bekar
+1841,35,1,4,Tıp,Erkek,Evli
+1842,24,24,3,Tıp,Erkek,Bekar
+1843,28,12,1,Yaşam Bilimleri,Kadın,Evli
+1844,26,3,4,Tıp,Erkek,Evli
+1845,30,10,3,Pazarlama,Erkek,Evli
+1846,40,26,2,Tıp,Kadın,Evli
+1847,35,2,3,Yaşam Bilimleri,Erkek,Boşanmış
+1848,34,1,3,Tıp,Erkek,Bekar
+1849,35,4,4,Diğer,Erkek,Evli
+1850,43,9,3,Pazarlama,Kadın,Bekar
+1851,32,2,1,Yaşam Bilimleri,Kadın,Boşanmış
+1852,56,4,4,Teknik Diploma,Kadın,Boşanmış
+1853,29,6,1,Tıp,Kadın,Evli
+1854,19,9,2,Yaşam Bilimleri,Erkek,Bekar
+1855,45,7,3,Tıp,Kadın,Evli
+1856,37,1,3,Yaşam Bilimleri,Kadın,Evli
+1857,20,3,3,Yaşam Bilimleri,Erkek,Bekar
+1858,44,10,4,Yaşam Bilimleri,Erkek,Bekar
+1859,53,7,2,Tıp,Kadın,Boşanmış
+1860,29,15,1,Yaşam Bilimleri,Kadın,Evli
+1861,22,3,4,Yaşam Bilimleri,Erkek,Evli
+1862,46,2,3,Pazarlama,Kadın,Evli
+1863,44,17,3,Yaşam Bilimleri,Erkek,Bekar
+1864,33,2,3,İnsan Kaynakları,Erkek,Evli
+1865,41,5,2,Yaşam Bilimleri,Erkek,Boşanmış
+1866,30,29,4,Yaşam Bilimleri,Erkek,Boşanmış
+1867,40,2,4,Tıp,Erkek,Evli
+1868,50,2,3,Tıp,Kadın,Evli
+1869,28,19,4,Tıp,Erkek,Evli
+1870,46,15,2,Yaşam Bilimleri,Erkek,Evli
+1871,35,17,4,Yaşam Bilimleri,Erkek,Evli
+1872,24,17,2,Yaşam Bilimleri,Kadın,Evli
+1873,33,25,3,Tıp,Kadın,Evli
+1874,36,6,4,Yaşam Bilimleri,Erkek,Boşanmış
+1875,30,7,4,Yaşam Bilimleri,Erkek,Boşanmış
+1876,44,29,4,Diğer,Erkek,Bekar
+1877,20,21,3,Pazarlama,Erkek,Bekar
+1878,46,2,4,Teknik Diploma,Erkek,Boşanmış
+1879,42,2,5,Tıp,Erkek,Evli
+1880,60,7,4,Pazarlama,Erkek,Boşanmış
+1881,32,13,3,Diğer,Kadın,Evli
+1882,32,2,2,Yaşam Bilimleri,Kadın,Bekar
+1883,36,1,3,Teknik Diploma,Kadın,Boşanmış
+1884,33,9,3,Tıp,Erkek,Evli
+1885,40,10,3,Teknik Diploma,Kadın,Boşanmış
+1886,25,10,4,Yaşam Bilimleri,Erkek,Bekar
+1887,30,1,3,Tıp,Erkek,Evli
+1888,42,26,5,Tıp,Kadın,Evli
+1889,35,8,2,Pazarlama,Kadın,Evli
+1890,27,14,3,Yaşam Bilimleri,Erkek,Evli
+1891,54,1,4,Yaşam Bilimleri,Kadın,Boşanmış
+1892,44,2,1,Yaşam Bilimleri,Kadın,Evli
+1893,19,10,3,Tıp,Kadın,Bekar
+1894,29,1,3,Yaşam Bilimleri,Kadın,Boşanmış
+1895,54,3,3,Yaşam Bilimleri,Erkek,Evli
+1896,31,11,2,Tıp,Erkek,Evli
+1897,31,24,3,Tıp,Kadın,Bekar
+1898,59,3,3,Yaşam Bilimleri,Kadın,Bekar
+1899,43,3,3,Yaşam Bilimleri,Erkek,Evli
+1900,49,4,2,Tıp,Erkek,Evli
+1901,36,3,3,Teknik Diploma,Erkek,Evli
+1902,48,2,2,Teknik Diploma,Erkek,Bekar
+1903,27,4,2,Yaşam Bilimleri,Erkek,Boşanmış
+1904,29,7,3,Yaşam Bilimleri,Erkek,Boşanmış
+1905,48,1,3,Yaşam Bilimleri,Erkek,Bekar
+1906,29,1,3,Yaşam Bilimleri,Kadın,Boşanmış
+1907,34,20,3,Teknik Diploma,Kadın,Evli
+1908,44,5,3,Pazarlama,Erkek,Evli
+1909,33,10,5,Pazarlama,Erkek,Boşanmış
+1910,19,25,3,Yaşam Bilimleri,Kadın,Bekar
+1911,23,1,2,Yaşam Bilimleri,Erkek,Evli
+1912,25,24,1,Yaşam Bilimleri,Erkek,Bekar
+1913,26,4,2,Yaşam Bilimleri,Erkek,Bekar
+1914,45,2,3,Pazarlama,Kadın,Bekar
+1915,55,8,1,Tıp,Erkek,Boşanmış
+1916,21,10,2,Yaşam Bilimleri,Kadın,Bekar
+1917,46,4,2,Pazarlama,Kadın,Evli
+1918,34,2,3,Pazarlama,Kadın,Bekar
+1919,51,9,3,Yaşam Bilimleri,Erkek,Boşanmış
+1920,59,18,4,Tıp,Erkek,Bekar
+1921,34,19,3,Tıp,Kadın,Boşanmış
+1922,28,1,4,Tıp,Erkek,Bekar
+1923,44,4,2,Yaşam Bilimleri,Erkek,Boşanmış
+1924,34,11,3,Yaşam Bilimleri,Erkek,Evli
+1925,35,6,1,Yaşam Bilimleri,Erkek,Evli
+1926,42,7,4,Tıp,Kadın,Evli
+1927,43,4,4,Pazarlama,Kadın,Bekar
+1928,36,2,4,Yaşam Bilimleri,Kadın,Bekar
+1929,44,15,3,Tıp,Kadın,Evli
+1930,28,2,3,Yaşam Bilimleri,Erkek,Evli
+1931,51,6,2,Tıp,Kadın,Bekar
+1932,30,9,2,Tıp,Kadın,Bekar
+1933,29,7,3,Teknik Diploma,Kadın,Boşanmış
+1934,28,1,3,Teknik Diploma,Erkek,Bekar
+1935,25,1,3,Tıp,Kadın,Bekar
+1936,32,8,3,Tıp,Erkek,Evli
+1937,45,25,3,Tıp,Kadın,Bekar
+1938,39,13,4,Tıp,Kadın,Boşanmış
+1939,58,23,4,Yaşam Bilimleri,Erkek,Boşanmış
+1940,32,7,2,Yaşam Bilimleri,Erkek,Evli
+1941,39,23,3,Tıp,Erkek,Bekar
+1942,30,6,3,Teknik Diploma,Kadın,Evli
+1943,36,10,4,Teknik Diploma,Kadın,Evli
+1944,46,1,2,Yaşam Bilimleri,Kadın,Bekar
+1945,28,1,3,Yaşam Bilimleri,Kadın,Evli
+1946,50,28,3,Yaşam Bilimleri,Kadın,Evli
+1947,40,25,4,Pazarlama,Erkek,Bekar
+1948,52,5,3,Yaşam Bilimleri,Erkek,Bekar
+1949,30,17,4,Tıp,Kadın,Evli
+1950,39,18,2,Yaşam Bilimleri,Erkek,Bekar
+1951,31,2,4,Yaşam Bilimleri,Kadın,Boşanmış
+1952,41,10,2,Tıp,Erkek,Bekar
+1953,31,1,3,Yaşam Bilimleri,Kadın,Bekar
+1954,44,3,3,Yaşam Bilimleri,Erkek,Evli
+1955,42,2,1,Yaşam Bilimleri,Erkek,Evli
+1956,55,2,2,Tıp,Kadın,Evli
+1957,56,8,4,Yaşam Bilimleri,Erkek,Bekar
+1958,40,16,2,Yaşam Bilimleri,Erkek,Boşanmış
+1959,34,9,3,Yaşam Bilimleri,Erkek,Boşanmış
+1960,40,2,3,Yaşam Bilimleri,Erkek,Bekar
+1961,41,1,3,Pazarlama,Kadın,Boşanmış
+1962,35,4,4,Yaşam Bilimleri,Erkek,Bekar
+1963,51,5,3,Yaşam Bilimleri,Erkek,Boşanmış
+1964,38,2,2,Yaşam Bilimleri,Kadın,Boşanmış
+1965,34,15,2,Tıp,Kadın,Bekar
+1966,25,19,1,Tıp,Erkek,Evli
+1967,58,7,4,Tıp,Kadın,Evli
+1968,40,1,4,Yaşam Bilimleri,Erkek,Evli
+1969,36,7,3,Pazarlama,Kadın,Evli
+1970,48,4,3,Yaşam Bilimleri,Erkek,Bekar
+1971,27,11,3,Tıp,Kadın,Evli
+1972,51,11,2,Teknik Diploma,Kadın,Bekar
+1973,18,1,3,Yaşam Bilimleri,Kadın,Bekar
+1974,35,1,3,Tıp,Kadın,Evli
+1975,27,2,1,Yaşam Bilimleri,Erkek,Bekar
+1976,55,13,4,Pazarlama,Erkek,Bekar
+1977,56,23,3,Yaşam Bilimleri,Erkek,Evli
+1978,34,26,1,Teknik Diploma,Kadın,Boşanmış
+1979,40,2,1,Tıp,Kadın,Boşanmış
+1980,34,29,3,Tıp,Erkek,Evli
+1981,31,2,3,Yaşam Bilimleri,Kadın,Bekar
+1982,35,18,4,Pazarlama,Kadın,Evli
+1983,38,7,3,Yaşam Bilimleri,Erkek,Boşanmış
+1984,34,2,4,Teknik Diploma,Kadın,Bekar
+1985,28,26,3,Yaşam Bilimleri,Erkek,Evli
+1986,31,22,4,Tıp,Erkek,Evli
+1987,39,21,4,Yaşam Bilimleri,Erkek,Evli
+1988,51,2,3,Pazarlama,Erkek,Evli
+1989,41,22,3,Yaşam Bilimleri,Kadın,Boşanmış
+1990,37,4,1,Yaşam Bilimleri,Erkek,Evli
+1991,33,5,1,Yaşam Bilimleri,Erkek,Evli
+1992,32,2,1,Pazarlama,Erkek,Evli
+1993,39,25,2,Yaşam Bilimleri,Erkek,Evli
+1994,25,18,1,Yaşam Bilimleri,Erkek,Evli
+1995,52,28,2,Tıp,Kadın,Evli
+1996,43,6,3,Tıp,Kadın,Bekar
+1997,27,10,3,Pazarlama,Kadın,Evli
+1998,27,17,4,Yaşam Bilimleri,Kadın,Bekar
+1999,26,2,1,Tıp,Erkek,Bekar
+2000,42,10,3,İnsan Kaynakları,Kadın,Evli
+2001,52,8,4,Diğer,Kadın,Evli
+2002,37,11,3,Tıp,Kadın,Bekar
+2003,35,18,2,Yaşam Bilimleri,Erkek,Bekar
+2004,25,1,3,Teknik Diploma,Erkek,Evli
+2005,26,7,3,Diğer,Erkek,Bekar
+2006,29,17,3,Diğer,Erkek,Bekar
+2007,49,28,2,Yaşam Bilimleri,Erkek,Bekar
+2008,29,14,1,Diğer,Kadın,Bekar
+2009,54,1,3,Tıp,Kadın,Bekar
+2010,58,1,3,Tıp,Kadın,Evli
+2011,55,1,4,Tıp,Erkek,Boşanmış
+2012,36,3,4,Pazarlama,Kadın,Bekar
+2013,31,1,4,Yaşam Bilimleri,Kadın,Bekar
+2014,30,7,4,Pazarlama,Kadın,Boşanmış
+2015,31,8,5,Yaşam Bilimleri,Kadın,Bekar
+2016,34,1,4,Diğer,Erkek,Boşanmış
+2017,31,8,3,Yaşam Bilimleri,Kadın,Bekar
+2018,27,11,1,Yaşam Bilimleri,Erkek,Evli
+2019,36,4,4,Yaşam Bilimleri,Erkek,Bekar
+2020,36,16,4,Pazarlama,Kadın,Evli
+2021,47,1,3,Teknik Diploma,Erkek,Evli
+2022,25,9,2,Yaşam Bilimleri,Erkek,Evli
+2023,37,5,2,Teknik Diploma,Erkek,Bekar
+2024,56,1,2,Yaşam Bilimleri,Kadın,Evli
+2025,47,2,4,Tıp,Kadın,Evli
+2026,24,4,1,Tıp,Kadın,Evli
+2027,32,7,5,Pazarlama,Erkek,Evli
+2028,34,1,3,Yaşam Bilimleri,Kadın,Evli
+2029,41,5,5,Tıp,Erkek,Evli
+2030,40,9,4,Diğer,Erkek,Boşanmış
+2031,31,8,2,Yaşam Bilimleri,Erkek,Boşanmış
+2032,46,9,3,Pazarlama,Erkek,Boşanmış
+2033,39,2,3,Yaşam Bilimleri,Kadın,Bekar
+2034,31,1,5,Yaşam Bilimleri,Kadın,Bekar
+2035,45,20,3,Tıp,Erkek,Boşanmış
+2036,31,8,2,Tıp,Kadın,Bekar
+2037,31,2,3,Yaşam Bilimleri,Erkek,Evli
+2038,45,29,3,Teknik Diploma,Erkek,Evli
+2039,48,7,3,Pazarlama,Erkek,Boşanmış
+2040,34,9,4,Teknik Diploma,Kadın,Evli
+2041,40,8,1,Tıp,Erkek,Boşanmış
+2042,28,5,3,Tıp,Erkek,Bekar
+2043,44,5,3,Yaşam Bilimleri,Erkek,Bekar
+2044,53,2,3,Tıp,Erkek,Bekar
+2045,49,5,4,Teknik Diploma,Erkek,Evli
+2046,40,2,3,Tıp,Erkek,Boşanmış
+2047,44,20,3,Yaşam Bilimleri,Erkek,Bekar
+2048,33,7,3,Tıp,Erkek,Evli
+2049,34,3,3,Diğer,Erkek,Bekar
+2050,30,16,1,Yaşam Bilimleri,Erkek,Evli
+2051,42,9,2,Tıp,Kadın,Bekar
+2052,44,1,5,Pazarlama,Kadın,Evli
+2053,30,7,3,Teknik Diploma,Erkek,Boşanmış
+2054,57,1,2,Yaşam Bilimleri,Erkek,Evli
+2055,49,7,4,Yaşam Bilimleri,Erkek,Boşanmış
+2056,34,15,3,Tıp,Erkek,Boşanmış
+2057,28,1,3,Teknik Diploma,Erkek,Evli
+2058,29,13,3,Teknik Diploma,Kadın,Bekar
+2059,34,24,4,Tıp,Kadın,Bekar
+2060,35,7,1,Yaşam Bilimleri,Erkek,Evli
+2061,24,9,3,Tıp,Erkek,Bekar
+2062,24,13,2,Yaşam Bilimleri,Kadın,Evli
+2063,44,2,1,Tıp,Erkek,Bekar
+2064,29,19,3,Yaşam Bilimleri,Erkek,Boşanmış
+2065,30,1,3,Yaşam Bilimleri,Erkek,Boşanmış
+2066,55,4,4,Yaşam Bilimleri,Erkek,Evli
+2067,33,4,4,Tıp,Kadın,Evli
+2068,47,14,3,Tıp,Kadın,Evli
+2069,28,2,2,Tıp,Erkek,Bekar
+2070,28,1,3,Yaşam Bilimleri,Erkek,Boşanmış
+2071,28,7,3,Yaşam Bilimleri,Erkek,Bekar
+2072,49,3,2,Tıp,Kadın,Evli
+2073,29,2,1,Yaşam Bilimleri,Kadın,Evli
+2074,28,29,1,Yaşam Bilimleri,Erkek,Evli
+2075,33,8,5,Yaşam Bilimleri,Erkek,Bekar
+2076,32,10,3,Tıp,Erkek,Bekar
+2077,54,11,4,Tıp,Kadın,Boşanmış
+2078,29,1,4,Teknik Diploma,Erkek,Bekar
+2079,44,28,3,Yaşam Bilimleri,Erkek,Evli
+2080,39,6,3,Yaşam Bilimleri,Kadın,Bekar
+2081,46,3,3,Yaşam Bilimleri,Kadın,Evli
+2082,35,16,3,Yaşam Bilimleri,Kadın,Bekar
+2083,23,20,1,Yaşam Bilimleri,Erkek,Bekar
+2084,40,9,4,Yaşam Bilimleri,Erkek,Bekar
+2085,34,1,3,Teknik Diploma,Erkek,Evli
+2086,31,3,3,Yaşam Bilimleri,Kadın,Bekar
+2087,50,22,5,Tıp,Erkek,Bekar
+2088,34,7,2,Teknik Diploma,Erkek,Evli
+2089,42,2,3,Tıp,Erkek,Evli
+2090,37,13,3,Tıp,Erkek,Evli
+2091,29,8,1,Diğer,Kadın,Evli
+2092,33,25,3,Yaşam Bilimleri,Erkek,Bekar
+2093,45,28,3,Teknik Diploma,Erkek,Evli
+2094,42,2,3,Yaşam Bilimleri,Erkek,Evli
+2095,40,9,2,Tıp,Erkek,Evli
+2096,33,28,4,Yaşam Bilimleri,Erkek,Evli
+2097,40,6,2,Tıp,Erkek,Bekar
+2098,24,21,2,Teknik Diploma,Erkek,Boşanmış
+2099,40,8,2,Yaşam Bilimleri,Erkek,Boşanmış
+2100,45,1,4,Teknik Diploma,Erkek,Boşanmış
+2101,35,28,4,Yaşam Bilimleri,Kadın,Evli
+2102,32,5,2,Yaşam Bilimleri,Kadın,Evli
+2103,36,2,4,Yaşam Bilimleri,Erkek,Bekar
+2104,48,16,4,Yaşam Bilimleri,Kadın,Boşanmış
+2105,29,9,3,Yaşam Bilimleri,Erkek,Evli
+2106,33,8,4,Yaşam Bilimleri,Erkek,Evli
+2107,30,1,3,Yaşam Bilimleri,Erkek,Evli
+2108,38,10,4,İnsan Kaynakları,Erkek,Evli
+2109,35,1,3,Tıp,Erkek,Bekar
+2110,30,29,4,Teknik Diploma,Erkek,Evli
+2111,35,2,3,Yaşam Bilimleri,Kadın,Boşanmış
+2112,53,2,5,Teknik Diploma,Kadın,Evli
+2113,38,2,3,Tıp,Erkek,Evli
+2114,32,1,4,Teknik Diploma,Erkek,Evli
+2115,48,15,4,Diğer,Kadın,Evli
+2116,34,7,4,Tıp,Erkek,Bekar
+2117,55,26,5,Pazarlama,Erkek,Evli
+2118,34,1,4,Yaşam Bilimleri,Erkek,Evli
+2119,26,3,3,Yaşam Bilimleri,Kadın,Evli
+2120,38,14,3,Yaşam Bilimleri,Erkek,Evli
+2121,38,16,3,Yaşam Bilimleri,Kadın,Bekar
+2122,36,1,4,Yaşam Bilimleri,Kadın,Bekar
+2123,29,3,1,Tıp,Erkek,Bekar
+2124,35,10,4,Tıp,Kadın,Bekar
+2125,39,6,3,Tıp,Erkek,Evli
+2126,29,2,1,Yaşam Bilimleri,Erkek,Boşanmış
+2127,50,9,3,Pazarlama,Erkek,Evli
+2128,23,10,3,Teknik Diploma,Erkek,Evli
+2129,36,6,4,Yaşam Bilimleri,Erkek,Evli
+2130,42,9,2,Diğer,Erkek,Bekar
+2131,35,28,3,Yaşam Bilimleri,Erkek,Evli
+2132,34,10,4,Teknik Diploma,Erkek,Evli
+2133,40,14,2,Yaşam Bilimleri,Kadın,Evli
+2134,43,27,3,Teknik Diploma,Erkek,Boşanmış
+2135,35,7,2,Yaşam Bilimleri,Erkek,Evli
+2136,46,1,4,Yaşam Bilimleri,Erkek,Bekar
+2137,28,24,3,Tıp,Erkek,Evli
+2138,22,26,2,Diğer,Kadın,Evli
+2139,50,20,5,Tıp,Erkek,Evli
+2140,32,5,4,Diğer,Kadın,Evli
+2141,44,7,3,Tıp,Kadın,Boşanmış
+2142,30,7,3,Tıp,Erkek,Evli
+2143,45,5,5,Tıp,Kadın,Bekar
+2144,45,26,3,Pazarlama,Erkek,Evli
+2145,31,2,4,Diğer,Erkek,Bekar
+2146,36,12,4,Yaşam Bilimleri,Kadın,Evli
+2147,34,10,4,Yaşam Bilimleri,Erkek,Boşanmış
+2148,49,25,4,Yaşam Bilimleri,Kadın,Evli
+2149,39,10,5,Tıp,Erkek,Evli
+2150,27,19,3,Diğer,Erkek,Boşanmış
+2151,35,18,5,Yaşam Bilimleri,Erkek,Evli
+2152,28,27,3,Tıp,Kadın,Boşanmış
+2153,21,5,1,Tıp,Erkek,Bekar
+2154,18,3,2,Tıp,Kadın,Bekar
+2155,47,26,4,Yaşam Bilimleri,Kadın,Evli
+2156,39,3,2,Tıp,Erkek,Boşanmış
+2157,40,15,3,Yaşam Bilimleri,Kadın,Evli
+2158,35,8,4,Yaşam Bilimleri,Kadın,Evli
+2159,37,19,3,Yaşam Bilimleri,Erkek,Evli
+2160,39,4,3,Tıp,Kadın,Bekar
+2161,45,2,2,Diğer,Kadın,Boşanmış
+2162,38,2,2,Tıp,Kadın,Evli
+2163,35,10,3,Tıp,Erkek,Evli
+2164,37,10,3,Tıp,Kadın,Evli
+2165,40,16,3,Yaşam Bilimleri,Kadın,Bekar
+2166,44,1,5,İnsan Kaynakları,Erkek,Evli
+2167,48,4,5,Tıp,Erkek,Evli
+2168,35,15,2,Tıp,Erkek,Boşanmış
+2169,24,2,1,Teknik Diploma,Kadın,Bekar
+2170,27,8,3,Tıp,Kadın,Evli
+2171,27,2,3,Tıp,Erkek,Bekar
+2172,40,7,3,Yaşam Bilimleri,Erkek,Bekar
+2173,29,10,3,Tıp,Erkek,Bekar
+2174,36,5,4,Yaşam Bilimleri,Kadın,Evli
+2175,25,2,1,Yaşam Bilimleri,Erkek,Boşanmış
+2176,39,12,3,Tıp,Erkek,Evli
+2177,49,22,4,Diğer,Kadın,Evli
+2178,50,17,5,Yaşam Bilimleri,Kadın,Boşanmış
+2179,20,2,3,Tıp,Kadın,Bekar
+2180,34,3,3,Yaşam Bilimleri,Kadın,Boşanmış
+2181,36,7,3,Yaşam Bilimleri,Erkek,Bekar
+2182,49,6,1,Yaşam Bilimleri,Kadın,Evli
+2183,36,1,4,Tıp,Kadın,Evli
+2184,36,3,2,Yaşam Bilimleri,Erkek,Boşanmış
+2185,54,22,5,Tıp,Kadın,Evli
+2186,43,15,2,Yaşam Bilimleri,Erkek,Evli
+2187,35,12,4,Diğer,Erkek,Bekar
+2188,38,1,3,Yaşam Bilimleri,Erkek,Evli
+2189,29,5,3,Tıp,Erkek,Boşanmış
+2190,33,2,4,Tıp,Erkek,Boşanmış
+2191,32,2,3,Tıp,Erkek,Boşanmış
+2192,31,5,4,Yaşam Bilimleri,Kadın,Evli
+2193,49,16,3,Tıp,Kadın,Boşanmış
+2194,38,2,3,Tıp,Kadın,Bekar
+2195,47,2,4,Yaşam Bilimleri,Kadın,Boşanmış
+2196,49,1,3,Yaşam Bilimleri,Erkek,Bekar
+2197,41,23,2,Yaşam Bilimleri,Erkek,Bekar
+2198,20,9,1,Yaşam Bilimleri,Erkek,Bekar
+2199,33,16,3,Yaşam Bilimleri,Kadın,Boşanmış
+2200,36,26,4,Yaşam Bilimleri,Erkek,Evli
+2201,44,1,3,Yaşam Bilimleri,Kadın,Boşanmış
+2202,23,8,1,Tıp,Erkek,Bekar
+2203,38,4,2,Tıp,Kadın,Evli
+2204,53,24,4,Tıp,Erkek,Evli
+2205,48,7,2,Tıp,Kadın,Evli
+2206,32,2,4,Yaşam Bilimleri,Erkek,Bekar
+2207,26,7,3,Tıp,Erkek,Bekar
+2208,55,22,3,Teknik Diploma,Erkek,Boşanmış
+2209,34,5,2,Tıp,Erkek,Evli
+2210,60,1,4,Tıp,Erkek,Boşanmış
+2211,33,21,3,Tıp,Erkek,Evli
+2212,37,1,4,Tıp,Erkek,Boşanmış
+2213,34,19,3,Yaşam Bilimleri,Kadın,Evli
+2214,23,7,3,Yaşam Bilimleri,Erkek,Boşanmış
+2215,44,2,3,Yaşam Bilimleri,Kadın,Evli
+2216,35,2,4,Tıp,Erkek,Bekar
+2217,43,2,3,Tıp,Erkek,Evli
+2218,24,9,3,Tıp,Erkek,Evli
+2219,41,6,3,Pazarlama,Erkek,Bekar
+2220,29,9,4,Tıp,Kadın,Evli
+2221,36,2,4,Yaşam Bilimleri,Kadın,Bekar
+2222,45,1,1,Yaşam Bilimleri,Erkek,Evli
+2223,24,22,1,İnsan Kaynakları,Erkek,Evli
+2224,47,9,3,Yaşam Bilimleri,Erkek,Evli
+2225,26,17,4,Tıp,Erkek,Evli
+2226,45,28,2,Teknik Diploma,Kadın,Bekar
+2227,32,10,3,Yaşam Bilimleri,Erkek,Evli
+2228,31,2,4,Yaşam Bilimleri,Erkek,Evli
+2229,41,4,3,İnsan Kaynakları,Erkek,Evli
+2230,40,8,2,Yaşam Bilimleri,Kadın,Evli
+2231,24,29,1,Tıp,Erkek,Boşanmış
+2232,46,13,4,Yaşam Bilimleri,Erkek,Bekar
+2233,35,27,4,Yaşam Bilimleri,Erkek,Evli
+2234,30,16,1,Yaşam Bilimleri,Erkek,Evli
+2235,47,2,4,Pazarlama,Erkek,Evli
+2236,46,2,3,Yaşam Bilimleri,Erkek,Boşanmış
+2237,36,13,5,Pazarlama,Erkek,Boşanmış
+2238,32,1,2,Yaşam Bilimleri,Erkek,Bekar
+2239,23,4,1,Tıp,Kadın,Bekar
+2240,31,24,1,Teknik Diploma,Kadın,Bekar
+2241,39,1,3,Yaşam Bilimleri,Erkek,Evli
+2242,32,19,3,Yaşam Bilimleri,Erkek,Evli
+2243,40,7,4,Tıp,Erkek,Bekar
+2244,45,4,3,Yaşam Bilimleri,Kadın,Evli
+2245,30,2,4,Teknik Diploma,Kadın,Bekar
+2246,24,10,3,Tıp,Erkek,Evli
+2247,30,8,3,İnsan Kaynakları,Kadın,Boşanmış
+2248,31,5,3,Teknik Diploma,Erkek,Evli
+2249,27,8,3,Tıp,Kadın,Bekar
+2250,29,9,3,Pazarlama,Kadın,Bekar
+2251,29,1,3,Yaşam Bilimleri,Erkek,Bekar
+2252,30,15,2,Pazarlama,Erkek,Boşanmış
+2253,34,2,4,Tıp,Erkek,Evli
+2254,33,2,3,Pazarlama,Kadın,Bekar
+2255,49,11,4,Pazarlama,Kadın,Bekar
+2256,33,16,3,Yaşam Bilimleri,Kadın,Bekar
+2257,38,2,2,Tıp,Kadın,Evli
+2258,31,16,4,Pazarlama,Erkek,Evli
+2259,29,4,3,Teknik Diploma,Kadın,Boşanmış
+2260,30,16,3,Yaşam Bilimleri,Erkek,Evli
+2261,32,5,4,Teknik Diploma,Erkek,Bekar
+2262,38,18,3,Tıp,Erkek,Evli
+2263,43,17,3,Teknik Diploma,Erkek,Evli
+2264,42,12,3,Tıp,Erkek,Boşanmış
+2265,55,2,3,Tıp,Erkek,Evli
+2266,33,4,3,Teknik Diploma,Erkek,Boşanmış
+2267,41,9,4,Yaşam Bilimleri,Erkek,Boşanmış
+2268,34,10,3,Yaşam Bilimleri,Erkek,Boşanmış
+2269,53,1,4,Tıp,Kadın,Evli
+2270,43,2,3,Yaşam Bilimleri,Erkek,Bekar
+2271,34,3,2,Yaşam Bilimleri,Kadın,Bekar
+2272,21,7,1,Pazarlama,Erkek,Bekar
+2273,38,6,2,Diğer,Kadın,Evli
+2274,22,8,1,Tıp,Kadın,Evli
+2275,31,29,4,Pazarlama,Kadın,Evli
+2276,51,3,3,Teknik Diploma,Kadın,Evli
+2277,37,9,2,Pazarlama,Erkek,Evli
+2278,46,2,4,Tıp,Erkek,Boşanmış
+2279,36,10,3,Yaşam Bilimleri,Erkek,Evli
+2280,44,1,2,Tıp,Erkek,Boşanmış
+2281,37,8,2,Diğer,Erkek,Boşanmış
+2282,35,27,3,Yaşam Bilimleri,Erkek,Bekar
+2283,33,8,4,Yaşam Bilimleri,Erkek,Evli
+2284,28,1,3,Yaşam Bilimleri,Erkek,Evli
+2285,39,10,1,Tıp,Erkek,Bekar
+2286,46,26,2,Yaşam Bilimleri,Erkek,Bekar
+2287,40,2,2,Yaşam Bilimleri,Kadın,Evli
+2288,42,13,3,Tıp,Erkek,Evli
+2289,35,2,2,Tıp,Erkek,Boşanmış
+2290,38,2,3,İnsan Kaynakları,Erkek,Boşanmış
+2291,34,9,4,Yaşam Bilimleri,Erkek,Evli
+2292,37,10,4,Tıp,Erkek,Bekar
+2293,39,20,3,Yaşam Bilimleri,Erkek,Boşanmış
+2294,43,9,3,Yaşam Bilimleri,Erkek,Bekar
+2295,41,5,3,Yaşam Bilimleri,Erkek,Bekar
+2296,41,4,1,Pazarlama,Kadın,Boşanmış
+2297,30,10,3,Tıp,Kadın,Bekar
+2298,26,20,2,Tıp,Kadın,Evli
+2299,46,21,2,Tıp,Kadın,Evli
+2300,40,1,3,Yaşam Bilimleri,Kadın,Boşanmış
+2301,34,8,2,Teknik Diploma,Erkek,Evli
+2302,58,2,3,Tıp,Erkek,Boşanmış
+2303,35,23,4,Tıp,Erkek,Evli
+2304,47,4,3,Yaşam Bilimleri,Kadın,Boşanmış
+2305,40,12,3,Yaşam Bilimleri,Kadın,Boşanmış
+2306,54,7,4,Tıp,Kadın,Evli
+2307,31,7,4,Pazarlama,Kadın,Evli
+2308,28,1,3,Tıp,Kadın,Evli
+2309,38,2,4,Pazarlama,Kadın,Evli
+2310,26,10,3,Tıp,Erkek,Bekar
+2311,58,15,4,Yaşam Bilimleri,Erkek,Evli
+2312,18,14,3,Tıp,Kadın,Bekar
+2313,31,18,5,İnsan Kaynakları,Erkek,Evli
+2314,29,13,3,İnsan Kaynakları,Erkek,Boşanmış
+2315,45,2,4,Yaşam Bilimleri,Kadın,Evli
+2316,36,2,4,Diğer,Kadın,Evli
+2317,43,2,4,Yaşam Bilimleri,Erkek,Evli
+2318,27,5,2,Yaşam Bilimleri,Kadın,Bekar
+2319,29,20,1,Tıp,Erkek,Evli
+2320,32,10,4,Pazarlama,Erkek,Bekar
+2321,42,10,4,Teknik Diploma,Erkek,Evli
+2322,47,9,4,Yaşam Bilimleri,Kadın,Bekar
+2323,46,2,2,Yaşam Bilimleri,Erkek,Boşanmış
+2324,28,1,2,Yaşam Bilimleri,Erkek,Boşanmış
+2325,29,29,1,Yaşam Bilimleri,Erkek,Boşanmış
+2326,42,8,3,Yaşam Bilimleri,Erkek,Bekar
+2327,32,2,4,Pazarlama,Erkek,Bekar
+2328,46,3,3,Teknik Diploma,Kadın,Boşanmış
+2329,27,23,1,Tıp,Kadın,Evli
+2330,29,6,1,Tıp,Erkek,Evli
+2331,43,6,3,Tıp,Kadın,Evli
+2332,48,10,3,Yaşam Bilimleri,Erkek,Evli
+2333,29,24,2,Yaşam Bilimleri,Erkek,Bekar
+2334,46,10,3,Yaşam Bilimleri,Kadın,Evli
+2335,27,15,3,Yaşam Bilimleri,Kadın,Evli
+2336,39,19,4,Diğer,Erkek,Boşanmış
+2337,55,2,4,Teknik Diploma,Erkek,Evli
+2338,28,3,3,Tıp,Kadın,Evli
+2339,30,9,3,Tıp,Erkek,Bekar
+2340,22,7,1,Yaşam Bilimleri,Erkek,Bekar
+2341,36,10,4,Teknik Diploma,Kadın,Evli
+2342,31,20,3,Yaşam Bilimleri,Erkek,Boşanmış
+2343,34,4,3,Yaşam Bilimleri,Erkek,Evli
+2344,29,7,3,Yaşam Bilimleri,Erkek,Bekar
+2345,37,7,4,Tıp,Erkek,Evli
+2346,35,16,2,Diğer,Kadın,Evli
+2347,45,25,2,Yaşam Bilimleri,Kadın,Evli
+2348,36,2,1,İnsan Kaynakları,Erkek,Bekar
+2349,40,1,4,Yaşam Bilimleri,Erkek,Boşanmış
+2350,26,1,2,Yaşam Bilimleri,Kadın,Evli
+2351,27,2,2,Tıp,Kadın,Bekar
+2352,48,22,3,Tıp,Kadın,Boşanmış
+2353,44,1,4,Yaşam Bilimleri,Erkek,Evli
+2354,34,16,4,Teknik Diploma,Erkek,Evli
+2355,56,24,2,Yaşam Bilimleri,Erkek,Bekar
+2356,36,17,2,Pazarlama,Erkek,Evli
+2357,41,8,3,Pazarlama,Kadın,Evli
+2358,42,6,3,Tıp,Erkek,Evli
+2359,31,10,2,Tıp,Kadın,Boşanmış
+2360,34,3,1,Tıp,Kadın,Evli
+2361,31,4,3,Tıp,Kadın,Boşanmış
+2362,26,6,3,Diğer,Erkek,Evli
+2363,45,1,4,Tıp,Erkek,Bekar
+2364,33,10,4,Pazarlama,Erkek,Bekar
+2365,28,1,2,Yaşam Bilimleri,Erkek,Evli
+2366,29,24,3,Teknik Diploma,Erkek,Bekar
+2367,39,21,4,Yaşam Bilimleri,Kadın,Evli
+2368,27,2,4,Teknik Diploma,Erkek,Evli
+2369,34,22,4,Diğer,Erkek,Evli
+2370,28,13,2,Pazarlama,Kadın,Bekar
+2371,47,14,4,Teknik Diploma,Erkek,Evli
+2372,56,11,5,Pazarlama,Kadın,Evli
+2373,39,9,2,Tıp,Erkek,Evli
+2374,38,8,3,Tıp,Kadın,Boşanmış
+2375,58,21,3,Yaşam Bilimleri,Kadın,Evli
+2376,32,5,2,Yaşam Bilimleri,Kadın,Bekar
+2377,38,9,2,Yaşam Bilimleri,Erkek,Boşanmış
+2378,49,2,1,Yaşam Bilimleri,Erkek,Evli
+2379,42,12,4,Pazarlama,Erkek,Boşanmış
+2380,27,22,3,İnsan Kaynakları,Kadın,Evli
+2381,35,18,4,Tıp,Erkek,Evli
+2382,28,16,3,Tıp,Erkek,Bekar
+2383,31,3,2,Tıp,Erkek,Boşanmış
+2384,36,9,4,Yaşam Bilimleri,Erkek,Evli
+2385,34,1,3,Pazarlama,Erkek,Bekar
+2386,34,13,4,Tıp,Erkek,Boşanmış
+2387,26,1,3,Tıp,Erkek,Bekar
+2388,29,1,3,Yaşam Bilimleri,Erkek,Evli
+2389,32,15,4,Tıp,Kadın,Boşanmış
+2390,31,1,3,Yaşam Bilimleri,Erkek,Evli
+2391,28,17,3,Teknik Diploma,Erkek,Boşanmış
+2392,38,1,3,Yaşam Bilimleri,Erkek,Bekar
+2393,35,7,4,Yaşam Bilimleri,Kadın,Evli
+2394,27,9,3,Pazarlama,Erkek,Bekar
+2395,32,5,4,Yaşam Bilimleri,Erkek,Bekar
+2396,31,26,4,Pazarlama,Erkek,Evli
+2397,53,24,4,Yaşam Bilimleri,Erkek,Bekar
+2398,54,9,2,Yaşam Bilimleri,Kadın,Evli
+2399,33,7,2,Yaşam Bilimleri,Erkek,Boşanmış
+2400,43,11,3,Yaşam Bilimleri,Erkek,Evli
+2401,38,1,4,Diğer,Erkek,Evli
+2402,55,26,4,İnsan Kaynakları,Erkek,Evli
+2403,31,2,1,Tıp,Kadın,Boşanmış
+2404,39,15,4,Pazarlama,Erkek,Bekar
+2405,42,23,2,Yaşam Bilimleri,Erkek,Bekar
+2406,31,10,3,Tıp,Kadın,Evli
+2407,54,10,3,Tıp,Kadın,Bekar
+2408,24,1,2,Yaşam Bilimleri,Erkek,Bekar
+2409,23,12,2,Diğer,Erkek,Bekar
+2410,40,11,3,Teknik Diploma,Kadın,Evli
+2411,40,2,2,Pazarlama,Kadın,Evli
+2412,25,2,3,İnsan Kaynakları,Kadın,Evli
+2413,30,1,2,Tıp,Erkek,Evli
+2414,25,2,1,Diğer,Erkek,Boşanmış
+2415,47,25,3,Tıp,Erkek,Bekar
+2416,33,1,2,Tıp,Erkek,Boşanmış
+2417,38,1,4,Yaşam Bilimleri,Erkek,Evli
+2418,31,2,2,Yaşam Bilimleri,Erkek,Evli
+2419,38,6,4,Yaşam Bilimleri,Erkek,Evli
+2420,42,18,4,Yaşam Bilimleri,Erkek,Boşanmış
+2421,41,1,3,Yaşam Bilimleri,Erkek,Evli
+2422,47,1,1,Tıp,Kadın,Evli
+2423,35,11,4,Tıp,Erkek,Evli
+2424,22,1,2,Yaşam Bilimleri,Erkek,Bekar
+2425,35,9,4,Tıp,Erkek,Bekar
+2426,33,15,2,Tıp,Kadın,Evli
+2427,32,29,4,Yaşam Bilimleri,Kadın,Bekar
+2428,40,1,4,Yaşam Bilimleri,Erkek,Evli
+2429,32,1,4,Tıp,Erkek,Evli
+2430,39,24,1,Yaşam Bilimleri,Erkek,Bekar
+2431,38,10,3,Tıp,Kadın,Evli
+2432,32,1,4,Pazarlama,Kadın,Evli
+2433,37,10,3,Yaşam Bilimleri,Kadın,Evli
+2434,25,8,2,Diğer,Kadın,Boşanmış
+2435,52,29,4,Yaşam Bilimleri,Erkek,Boşanmış
+2436,44,1,3,Tıp,Erkek,Bekar
+2437,21,5,1,Tıp,Erkek,Bekar
+2438,39,9,3,Yaşam Bilimleri,Erkek,Bekar
+2439,23,9,3,Pazarlama,Erkek,Evli
+2440,36,3,3,Tıp,Kadın,Evli
+2441,36,4,2,Yaşam Bilimleri,Kadın,Boşanmış
+2442,56,1,4,Yaşam Bilimleri,Erkek,Boşanmış
+2443,29,1,4,Tıp,Erkek,Evli
+2444,42,2,3,Yaşam Bilimleri,Erkek,Evli
+2445,56,7,2,Teknik Diploma,Erkek,Evli
+2446,41,28,4,Yaşam Bilimleri,Kadın,Evli
+2447,34,28,3,Pazarlama,Kadın,Evli
+2448,36,15,4,Pazarlama,Erkek,Boşanmış
+2449,41,3,3,Yaşam Bilimleri,Erkek,Boşanmış
+2450,32,2,3,Teknik Diploma,Erkek,Bekar
+2451,35,26,4,Yaşam Bilimleri,Kadın,Bekar
+2452,38,10,2,Yaşam Bilimleri,Kadın,Evli
+2453,50,1,4,Yaşam Bilimleri,Erkek,Boşanmış
+2454,36,11,4,Pazarlama,Kadın,Evli
+2455,45,20,3,Yaşam Bilimleri,Kadın,Bekar
+2456,40,2,4,Yaşam Bilimleri,Erkek,Bekar
+2457,35,18,4,Yaşam Bilimleri,Erkek,Evli
+2458,40,2,4,Tıp,Kadın,Evli
+2459,35,1,4,Yaşam Bilimleri,Kadın,Evli
+2460,29,13,2,Diğer,Erkek,Evli
+2461,29,28,4,Tıp,Kadın,Bekar
+2462,50,28,3,Pazarlama,Erkek,Boşanmış
+2463,39,24,1,Pazarlama,Kadın,Evli
+2464,31,5,3,Tıp,Erkek,Bekar
+2465,26,5,3,Diğer,Kadın,Bekar
+2466,36,23,2,Tıp,Erkek,Evli
+2467,39,6,1,Tıp,Erkek,Evli
+2468,27,4,3,Yaşam Bilimleri,Erkek,Evli
+2469,49,2,3,Tıp,Erkek,Evli
+2470,34,8,3,Tıp,Erkek,Evli

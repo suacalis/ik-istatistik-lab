@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "insananalitigi"
+version = "0.1.0"
+description = "R 'peopleanalytics' veri paketinin Türkçeleştirilmiş Python sürümü (Craig Starbuck, The Fundamentals of People Analytics)"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.9"
+dependencies = ["pandas>=1.3"]
+authors = [
+  { name = "Craig Starbuck (orijinal R paketi)" },
+]
+keywords = ["insan analitiği", "people analytics", "İK analitiği", "veri setleri", "pandas"]
+
+[tool.setuptools]
+packages = ["insananalitigi"]
+
+[tool.setuptools.package-data]
+insananalitigi = ["data/*.csv", "data/*.json"]
