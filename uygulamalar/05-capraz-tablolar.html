@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Çapraz Tablolar ve Simpson Paradoksu · İK İstatistik Laboratuvarı</title>
+<link rel="stylesheet" href="../assets/ortak.css">
+<style>
+  .hikaye{max-width:1100px;margin:0 auto}
+  .hikaye h2{font-size:26px}
+  .hikaye p{font-size:15px;line-height:1.65;margin:8px 0}
+  .hedef{border-left:4px solid var(--mavi);background:var(--mavi-acik);padding:12px 16px;border-radius:0 10px 10px 0;margin:14px 0}
+  .uyari{border-left:4px solid var(--kirmizi);background:var(--kirmizi-acik);padding:12px 16px;border-radius:0 10px 10px 0;margin:14px 0}
+  table.veri tbody tr{cursor:pointer}
+  table.veri tbody tr.secili{background:#fff7e6}
+  table.veri td.marj,table.veri th.marj{background:#f7f7f6;font-weight:700}
+  .faz{display:flex;gap:10px;align-items:flex-start;background:#eef3fb;border:1px solid #c9d8ee;border-radius:10px;padding:12px 14px;font-size:13.5px;line-height:1.55;margin:12px 0}
+  .faz .i{width:22px;height:22px;border-radius:50%;background:var(--mavi);color:#fff;display:grid;place-items:center;font-size:12px;font-weight:800;flex:none}
+</style>
+</head>
+<body>
+<header class="ust-bant">
+  <a class="logo" href="../index.html"><div class="ikon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,12 7,12 10,4 14,20 17,12 22,12"/></svg></div><h1>İstatistik Laboratuvarı: Çapraz Tablolar ve Simpson Paradoksu</h1></a>
+  <div class="sag-ust">
+    <nav class="sekmeler"><button class="sekme aktif" data-hedef="p1">▦ Çapraz Tablolar</button><button class="sekme" data-hedef="p2">⚠ Simpson Paradoksu</button></nav>
+    <a class="geri" href="../index.html">← Tüm Uygulamalar</a>
+  </div>
+</header>
+
+<main class="icerik">
+  <!-- ============ SEKME 1 ============ -->
+  <section class="panel aktif" id="p1"><div class="hikaye yigin">
+    <section class="kart">
+      <h2>Vaka Çalışması: Departmanlara Göre İşten Ayrılma</h2>
+      <p>İnsan kaynakları bilgi sistemleri (İKBS), her çalışanın hangi departmanda çalıştığını ve yıl içinde şirketten <b>ayrılıp ayrılmadığını</b> kaydeder. İşgücü devir hızı (turnover), işe alım ve eğitim maliyetleri nedeniyle İK'nın en yakından izlediği göstergelerden biridir. Burada bir şirketin üç departmanına odaklanıyoruz: <b>Satış, Üretim ve Bilgi Teknolojileri</b>.</p>
+      <div class="hedef"><b style="color:var(--mavi)">Amacımız:</b><br><i>İşten ayrılma oranının departmanlara göre farklılaşıp farklılaşmadığını görmek ve bu tür verilerin çapraz (olumsallık) tablolar, marjinal dağılımlar ve koşullu dağılımlarla nasıl özetlendiğini anlamak.</i></div>
+      <p class="ipucu-k">Veri: Bir yıllık dönemde departman bazında çalışan sayıları (öğretim amaçlı kurgusal İKBS verisi). Yıllık devir hızı = yıl içinde ayrılan çalışan sayısı / toplam çalışan sayısı.</p>
+    </section>
+    <section class="kart">
+      <div class="grafik-ust">
+        <div><h2 style="font-size:21px">1. Bölüm: Çapraz Tablo</h2><div class="acik">Çalışanların her iki değişkene (departman × ayrılma durumu) göre nasıl dağıldığı.</div></div>
+        <div class="btn-grup" id="modSec" style="flex:0 0 auto">
+          <button class="btn aktif" data-m="sayi">Sayılar</button><button class="btn" data-m="satir">Satır %</button><button class="btn" data-m="sutun">Sütun %</button><button class="btn" data-m="toplam">Toplam %</button>
+        </div>
+      </div>
+      <table class="veri" id="tablo"></table>
+      <p class="ipucu-k" style="margin-top:8px">Aşağıdaki grafikte vurgulamak için bir departmanın satırına tıklayın.</p>
+      <div class="not mavi" id="modAcik" style="margin-top:8px"></div>
+    </section>
+    <section class="kart">
+      <div class="grafik-ust">
+        <div><h2 style="font-size:21px">2. Bölüm: Koşullu Dağılım</h2><div class="acik" id="kosulAcik"></div></div>
+        <div class="btn-grup" id="kosulSec" style="flex:0 0 auto"><button class="btn aktif" data-k="dep">Departmana göre</button><button class="btn" data-k="durum">Ayrılma durumuna göre</button></div>
+      </div>
+      <div class="tuval" id="tuval1"><button class="buyut" data-tuval="tuval1"></button><svg id="svg1" viewBox="0 0 900 340"></svg></div>
+      <div class="lejant" style="margin-top:8px" id="lejant1"></div>
+      <div class="icgoru" style="margin-top:12px"><span class="et">YORUM</span><div id="yorum1"></div></div>
+    </section>
+  </div></section>
+
+  <!-- ============ SEKME 2 ============ -->
+  <section class="panel" id="p2"><div class="hikaye yigin">
+    <section class="kart">
+      <h2>Pozisyon Tipi Etkeni</h2>
+      <p>Şirketin iki şubesini karşılaştırıyoruz: <b>Ankara</b> ve <b>İstanbul</b>. Yönetim, İstanbul şubesinin işten ayrılma oranının daha yüksek olduğunu görüp İstanbul şube müdürünü "çalışanlarını elde tutamamakla" eleştiriyor. Şimdi üçüncü bir kategorik değişken ekliyoruz: çalışanın <b>pozisyon tipi</b> (Saha ve Ofis). Yalnızca genel yüzdelere bakmak yanıltıcı olabilir.</p>
+      <div class="uyari"><b style="color:var(--kirmizi)">Dikkatli olun:</b><br><i>Değişkenleri ayrı ayrı incelemeyi unutmayın. Birleştirilmiş (toplulaştırılmış) veride görülen eğilimler, veri alt gruplara ayrıldığında <b>tersine dönebilir</b>. İşte bu, Simpson Paradoksu'dur.</i></div>
+    </section>
+    <section class="kart">
+      <div class="grafik-ust">
+        <div><h2 style="font-size:21px">Simpson Paradoksu Gezgini</h2><div class="acik">"Pozisyon tipi" gizli (karıştırıcı) değişkeninin işten ayrılma eğilimini nasıl tersine çevirdiğini keşfedin.</div></div>
+        <button class="btn kirmizi" id="fazBtn">Pozisyon Tipine Göre Ayır →</button>
+      </div>
+      <div class="faz" id="faz"></div>
+      <div class="tuval" id="tuval2"><button class="buyut" data-tuval="tuval2"></button><svg id="svg2" viewBox="0 0 900 360"></svg></div>
+      <div class="lejant" style="margin-top:8px"><span><i style="background:#0b4a8b;border-radius:2px"></i>Ankara Şubesi</span><span><i style="background:#c8202e;border-radius:2px"></i>İstanbul Şubesi</span></div>
+      <div class="izgara-2" style="margin-top:16px">
+        <table class="veri" id="altTablo"></table>
+        <div><p class="kb">Şubelerin pozisyon tipi bileşimi</p><svg id="svg3" viewBox="0 0 440 170"></svg></div>
+      </div>
+    </section>
+    <section class="kart">
+      <h2 style="font-size:21px">"Gizli" Değişken</h2>
+      <p>Simpson Paradoksu, pozisyon tipi dağılımı şubeler arasında <b>dengesiz</b> olduğu için ortaya çıkar. Bu vaka çalışmasında:</p>
+      <ul style="font-size:15px;line-height:1.7">
+        <li>İstanbul şubesinin çalışanlarının çok daha büyük kısmı <b>saha</b> pozisyonlarındadır (<span id="iSaha"></span>; Ankara'da <span id="aSaha"></span>).</li>
+        <li>Saha pozisyonlarında (satış temsilcisi, servis teknisyeni vb.) işten ayrılma oranları <b>her iki şubede de</b> doğası gereği daha yüksektir.</li>
+        <li>Her pozisyon tipinde ayrı ayrı bakıldığında <b>Ankara'nın ayrılma oranı daha yüksektir</b>; yine de toplamda İstanbul daha kötü görünür.</li>
+      </ul>
+      <div class="not turuncu"><i>"Durun — yani İstanbul şubesi çalışanlarını daha kötü elde tutmuyor; sadece işgücünün büyük kısmı devir hızı doğal olarak yüksek olan saha pozisyonlarında!"</i><br><b>İşte İK analitiğinde iş başında istatistik:</b> Şube, yönetici ya da departman karşılaştırmalarında iş yapısı (pozisyon tipi, kıdem, unvan) gibi karıştırıcı değişkenler kontrol edilmeden karar verilmemelidir.</div>
+      <p class="ipucu-k" style="margin-top:10px">Not: Bu bölümdeki veriler, kavramı göstermek amacıyla kurgulanmış öğretim verisidir.</p>
+    </section>
+  </div></section>
+</main>
+<div class="alt-bilgi">İK için İstatistik · Etkileşimli Uygulamalar · Uygulama 05 — <a href="../index.html">Portala dön</a></div>
+
+<script src="../assets/istat.js"></script>
+<script>
+(() => {
+  const {$, el, f} = I;
+  const DEP = ['Satış', 'Üretim', 'Bilgi Teknolojileri'], DUR = ['Kaldı', 'Ayrıldı'];
+  const T = {'Satış': [340, 60], 'Üretim': [520, 58], 'Bilgi Teknolojileri': [128, 22]};
+  const RENK_D = ['#0b4a8b', '#c8202e'], RENK_S = ['#0b4a8b', '#c8202e', '#14966f'];
+  let mod = 'sayi', secili = null, kosul = 'dep';
+  const satirT = s => T[s][0] + T[s][1], sutunT = j => DEP.reduce((t, s) => t + T[s][j], 0), N = DEP.reduce((t, s) => t + satirT(s), 0);
+  const hucre = (v, s, j) => mod === 'sayi' ? v.toLocaleString('tr-TR') : mod === 'satir' ? I.yz(v / satirT(s)) : mod === 'sutun' ? I.yz(v / sutunT(j)) : I.yz(v / N);
+  function tablo() {
+    const marj = (v, tip) => mod === 'sayi' ? v.toLocaleString('tr-TR') : (mod === 'satir' && tip === 'satir') || (mod === 'sutun' && tip === 'sutun') ? '%100,0' : I.yz(v / N);
+    let h = `<thead><tr><th>Departman</th>${DUR.map(d => `<th>${d}</th>`).join('')}<th class="marj">Toplam</th></tr></thead><tbody>`;
+    DEP.forEach(s => h += `<tr data-s="${s}" class="${secili === s ? 'secili' : ''}"><td><b>${s}</b></td>${T[s].map((v, j) => `<td>${hucre(v, s, j)}</td>`).join('')}<td class="marj">${marj(satirT(s), 'satir')}</td></tr>`);
+    h += `<tr class="toplam"><td>Toplam</td>${[0, 1].map(j => `<td>${marj(sutunT(j), 'sutun')}</td>`).join('')}<td>${mod === 'sayi' ? N.toLocaleString('tr-TR') : '%100,0'}</td></tr></tbody>`;
+    $('tablo').innerHTML = h;
+    $('modAcik').innerHTML = {
+      sayi: '<b>Sayılar:</b> Her hücre, iki değişkenin o birleşimine düşen çalışan sayısıdır. En sağdaki sütun ve en alttaki satır <b>marjinal dağılımları</b> verir (departman büyüklükleri ve şirket genelinde kalan/ayrılan sayıları).',
+      satir: '<b>Satır yüzdeleri:</b> Her departmanın <i>kendi</i> çalışanları içinde ayrılma oranı, yani <b>departmanın yıllık devir hızı</b>. Bu, departmana göre koşullu dağılımdır — departmanları karşılaştırmanın doğru yolu budur.',
+      sutun: '<b>Sütun yüzdeleri:</b> Örneğin ayrılan çalışanların yüzde kaçının hangi departmandan olduğu. Bu, <b>ayrılma durumuna göre koşullu dağılımdır</b>.',
+      toplam: `<b>Toplam yüzdeleri:</b> Her hücrenin tüm çalışanlar (N = ${N.toLocaleString('tr-TR')}) içindeki payı — <b>ortak (birleşik) dağılım</b>.`}[mod];
+  }
+  $('tablo').addEventListener('click', e => { const tr = e.target.closest('tr[data-s]'); if (!tr) return; secili = secili === tr.dataset.s ? null : tr.dataset.s; tablo(); grafik1(); });
+  document.querySelectorAll('#modSec .btn').forEach(b => b.addEventListener('click', () => { mod = b.dataset.m; document.querySelectorAll('#modSec .btn').forEach(x => x.classList.toggle('aktif', x === b)); tablo(); }));
+  document.querySelectorAll('#kosulSec .btn').forEach(b => b.addEventListener('click', () => { kosul = b.dataset.k; document.querySelectorAll('#kosulSec .btn').forEach(x => x.classList.toggle('aktif', x === b)); grafik1(); }));
+
+  function grafik1() {
+    const svg = $('svg1'); svg.innerHTML = ''; const W = 900, H = 340, L = 160, R = 30, Tp = 16, B = 40;
+    const gruplar = kosul === 'dep' ? DEP : DUR;
+    const parcalar = kosul === 'dep' ? DUR : DEP, renk = kosul === 'dep' ? RENK_D : RENK_S;
+    const pay = (g, p) => kosul === 'dep' ? T[g][DUR.indexOf(p)] / satirT(g) : T[p][DUR.indexOf(g)] / sutunT(DUR.indexOf(g));
+    const x = I.olcek(0, 1, L, W - R), bh = (H - Tp - B) / gruplar.length;
+    I.eksenler(svg, {W, H, L, R, T: Tp, B, x, y: v => v, xt: [0, .25, .5, .75, 1], yt: [], xBicim: v => '%' + f(v * 100, 0), yEksen: false, izgara: false});
+    gruplar.forEach((g, i) => { let bas = 0; const yy = Tp + i * bh + bh * .18, hh = bh * .64;
+      const soluk = kosul === 'dep' && secili && secili !== g;
+      el('text', {x: L - 10, y: yy + hh / 2 + 4, 'text-anchor': 'end', 'font-size': 13, 'font-weight': 700, fill: soluk ? '#bbb' : '#1d2433'}, svg, g);
+      parcalar.forEach((p, j) => { const v = pay(g, p);
+        const r = el('rect', {x: x(bas), y: yy, width: x(bas + v) - x(bas), height: hh, fill: renk[j], 'fill-opacity': soluk ? .2 : 1, stroke: secili === g && kosul === 'dep' ? '#f59e0b' : '#fff', 'stroke-width': secili === g && kosul === 'dep' ? 3 : 1}, svg);
+        el('title', {}, r, `${g} · ${p}: ${I.yz(v)}`);
+        if (v > .06) el('text', {x: x(bas + v / 2), y: yy + hh / 2 + 4, 'text-anchor': 'middle', 'font-size': 12, 'font-weight': 700, fill: '#fff'}, svg, I.yz(v));
+        bas += v; }); });
+    $('lejant1').innerHTML = parcalar.map((p, j) => `<span><i style="background:${renk[j]};border-radius:2px"></i>${p}</span>`).join('');
+    $('kosulAcik').textContent = kosul === 'dep' ? 'Her departmanın çalışanları içinde kalan / ayrılan yüzdesi (satır yüzdeleri = devir hızı).' : 'Kalan ve ayrılan çalışanlar içinde her departmanın payı (sütun yüzdeleri).';
+    const o = DEP.map(s => [s, T[s][1] / satirT(s)]).sort((a, b) => b[1] - a[1]);
+    $('yorum1').innerHTML = kosul === 'dep'
+      ? `Yıllık devir hızı en yüksek departman <b>${o[0][0]}</b> (${I.yz(o[0][1])}), en düşük <b>${o[2][0]}</b> (${I.yz(o[2][1])}). Şirket geneli devir hızı ${I.yz(sutunT(1) / N)}. Koşullu dağılımlar birbirinden farklıysa departman ile ayrılma arasında bir <b>ilişki (bağımlılık)</b> olduğunu düşünürüz; aynı olsaydı değişkenler <b>bağımsız</b> olurdu.`
+      : `Ayrılan çalışanlar içinde en büyük pay Üretim'e aittir (${I.yz(T['Üretim'][1] / sutunT(1))}) — ama bunun nedeni büyük ölçüde Üretim'in <b>en kalabalık departman olmasıdır</b> (tüm çalışanlar içindeki payı: ${I.yz(satirT('Üretim') / N)}). Üretim'in kendi devir hızı aslında en düşüğüdür! Sütun yüzdeleri departmanları karşılaştırmak için uygun değildir.`;
+  }
+
+  // ============ SİMPSON ============
+  // [çalışan sayısı, ayrılan sayısı]
+  const ALT = {'Ankara Şubesi': {Saha: [150, 24], Ofis: [257, 18]}, 'İstanbul Şubesi': {Saha: [500, 75], Ofis: [81, 5]}};
+  const S2 = ['Ankara Şubesi', 'İstanbul Şubesi'], PL = ['Saha', 'Ofis'];
+  const top = s => ALT[s].Saha[0] + ALT[s].Ofis[0];
+  const oran = (s, p) => p ? ALT[s][p][1] / ALT[s][p][0] : (ALT[s].Saha[1] + ALT[s].Ofis[1]) / top(s);
+  let ayrik = false;
+  function simpson() {
+    const svg = $('svg2'); svg.innerHTML = ''; const W = 900, H = 360, L = 70, R = 30, Tp = 30, B = 46;
+    const gruplar = ayrik ? PL : ['Genel'];
+    const y = I.olcek(0, .2, H - B, Tp), gw = (W - L - R) / gruplar.length;
+    I.eksenler(svg, {W, H, L, R, T: Tp, B, x: v => v, y, xt: [], yt: [0, .05, .1, .15, .2], yBicim: v => '%' + f(v * 100, 0), yEt: 'Yıllık işten ayrılma oranı'});
+    gruplar.forEach((g, i) => { const cx = L + gw * i + gw / 2, bw = Math.min(110, gw * .28);
+      el('text', {x: cx, y: H - B + 22, 'text-anchor': 'middle', 'font-size': 14, 'font-weight': 700, fill: '#333'}, svg, g === 'Genel' ? 'Genel (tüm pozisyonlar)' : g + ' pozisyonları');
+      S2.forEach((s, j) => { const v = oran(s, g === 'Genel' ? null : g), x0 = cx + (j - 1) * bw * 1.1 + bw * .05;
+        el('rect', {x: x0, y: y(v), width: bw, height: y(0) - y(v), fill: RENK_S[j], rx: 3}, svg);
+        el('text', {x: x0 + bw / 2, y: y(v) - 7, 'text-anchor': 'middle', 'font-size': 13, 'font-weight': 800, fill: RENK_S[j]}, svg, I.yz(v, 1)); }); });
+    $('faz').innerHTML = ayrik
+      ? `<span class="i">2</span><div><b>2. Aşama: Ayrıştırılmış görünüm.</b> Pozisyon tipine göre ayırdığımızda, Ankara'nın ayrılma oranı <b>hem saha</b> (${I.yz(oran(S2[0], 'Saha'), 1)} ve ${I.yz(oran(S2[1], 'Saha'), 1)}) <b>hem de ofis</b> (${I.yz(oran(S2[0], 'Ofis'), 1)} ve ${I.yz(oran(S2[1], 'Ofis'), 1)}) pozisyonlarında daha yüksektir. Genel eğilim tersine döndü, çünkü İstanbul'un çalışanları ağırlıklı olarak devir hızı yüksek saha pozisyonlarında!</div>`
+      : `<span class="i">1</span><div><b>1. Aşama: Toplulaştırılmış görünüm.</b> Genel veriye bakıldığında <b style="color:var(--kirmizi)">İstanbul Şubesi</b>'nin yıllık işten ayrılma oranı (${I.yz(oran(S2[1]), 1)}), <b style="color:var(--mavi)">Ankara Şubesi</b>'ninkinden (${I.yz(oran(S2[0]), 1)}) yüksektir. İstanbul şube müdürü gerçekten çalışanlarını daha kötü mü elde tutuyor?</div>`;
+    $('fazBtn').textContent = ayrik ? '← Genel Toplamı Göster' : 'Pozisyon Tipine Göre Ayır →';
+    $('altTablo').innerHTML = `<thead><tr><th>Şube · Pozisyon</th><th>Çalışan</th><th>Ayrılan</th><th>Ayrılma oranı</th></tr></thead><tbody>` +
+      S2.flatMap(s => PL.map(p => `<tr><td>${s} · ${p}</td><td>${ALT[s][p][0]}</td><td>${ALT[s][p][1]}</td><td>${I.yz(oran(s, p), 1)}</td></tr>`).concat(`<tr class="toplam"><td>${s} · Toplam</td><td>${top(s)}</td><td>${ALT[s].Saha[1] + ALT[s].Ofis[1]}</td><td>${I.yz(oran(s), 1)}</td></tr>`)).join('') + '</tbody>';
+    const s3 = $('svg3'); s3.innerHTML = ''; const x3 = I.olcek(0, 1, 130, 430);
+    S2.forEach((s, j) => { const m = ALT[s].Saha[0] / top(s), yy = 20 + j * 70;
+      el('text', {x: 122, y: yy + 26, 'text-anchor': 'end', 'font-size': 13, 'font-weight': 700, fill: RENK_S[j]}, s3, s);
+      el('rect', {x: x3(0), y: yy, width: x3(m) - x3(0), height: 40, fill: '#7c3aed'}, s3);
+      el('rect', {x: x3(m), y: yy, width: x3(1) - x3(m), height: 40, fill: '#a3a3a3'}, s3);
+      el('text', {x: x3(m / 2), y: yy + 25, 'text-anchor': 'middle', 'font-size': 12, 'font-weight': 700, fill: '#fff'}, s3, 'Saha ' + I.yz(m, 0));
+      el('text', {x: x3((1 + m) / 2), y: yy + 25, 'text-anchor': 'middle', 'font-size': 12, 'font-weight': 700, fill: '#fff'}, s3, 'Ofis ' + I.yz(1 - m, 0)); });
+    $('iSaha').textContent = I.yz(ALT[S2[1]].Saha[0] / top(S2[1]), 0); $('aSaha').textContent = I.yz(ALT[S2[0]].Saha[0] / top(S2[0]), 0);
+  }
+  $('fazBtn').addEventListener('click', () => { ayrik = !ayrik; simpson(); });
+  tablo(); grafik1(); simpson();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dağılımları Karşılaştırma · İK İstatistik Laboratuvarı</title>
+<link rel="stylesheet" href="../assets/ortak.css">
+<style>
+  .kat-liste{max-height:220px;overflow:auto;border:1px solid var(--kenar);border-radius:10px}
+  .kat-oge{display:flex;align-items:center;gap:8px;padding:7px 10px;border-bottom:1px solid #f1f1f1;font-size:12.5px;font-weight:600}
+  .kat-oge:last-child{border-bottom:0}
+  .kat-oge span{flex:1;text-transform:uppercase}
+  .kat-oge button{border:1px solid var(--kenar);background:#fff;border-radius:5px;width:24px;height:22px;cursor:pointer;padding:0;font-size:11px}
+  .kat-oge.kapali span{color:#bbb;text-decoration:line-through}
+  .renkler{display:flex;gap:8px;flex-wrap:wrap}
+  .renkler button{width:28px;height:28px;border-radius:50%;border:3px solid #fff;box-shadow:0 0 0 1px #ccc;cursor:pointer}
+  .renkler button.aktif{box-shadow:0 0 0 2px #111}
+  .disa{display:flex;align-items:center;gap:6px;padding:0 16px;border-left:1px solid var(--kenar);font-size:11px;font-weight:800;letter-spacing:.1em;color:var(--soluk)}
+  .disa .btn{padding:5px 10px;font-size:12px}
+</style>
+</head>
+<body>
+<header class="ust-bant">
+  <a class="logo" href="../index.html"><div class="ikon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,12 7,12 10,4 14,20 17,12 22,12"/></svg></div><h1>İstatistik Laboratuvarı: Dağılımları Karşılaştırma</h1></a>
+  <div class="sag-ust">
+    <div class="disa">DIŞA AKTAR <button class="btn" data-dis="png">PNG</button><button class="btn" data-dis="jpg">JPG</button><button class="btn kirmizi" data-dis="svg">SVG</button></div>
+    <a class="geri" href="../index.html">← Tüm Uygulamalar</a>
+  </div>
+</header>
+
+<main class="icerik">
+  <div class="izgara">
+    <aside class="kart">
+      <div class="blok">
+        <p class="kb">1. Veri Kaynağı</p>
+        <div class="birak" id="birak"><div style="font-size:22px">⤒</div><b>VERİ DOSYASINI SÜRÜKLEYİN</b><br>veya <u>dosya seçin</u><br><span class="ipucu-k">CSV, XLSX, XLS</span></div>
+        <input type="file" id="dosya" accept=".csv,.txt,.xlsx,.xls" hidden>
+        <div class="btn-grup" style="margin-top:8px"><button class="btn" id="ucretBtn">Ücret ve performans</button><button class="btn" id="egitimBtn">Eğitim programı</button></div>
+        <div class="acik" id="veriAcik"></div>
+        <label class="acik" style="display:block">Hedef ölçüm (sayısal)</label><select id="hedef"></select>
+        <label class="acik" style="display:block">Gruplama değişkeni (kategorik)</label><select id="grup"></select>
+      </div>
+      <div class="blok">
+        <p class="kb">2. Genel Ayarlar</p>
+        <label class="acik" style="display:block;margin-top:0">Sıralama</label>
+        <select id="sira">
+          <option value="az">Gruplar (A → Z)</option><option value="za">Gruplar (Z → A)</option>
+          <option value="medArt">Medyan (düşük → yüksek)</option><option value="medAzl">Medyan (yüksek → düşük)</option><option value="elle">Elle / Özel</option>
+        </select>
+        <div class="bas" style="margin-top:10px"><span style="font-size:13px;font-weight:600">Yönelim</span><div class="btn-grup" style="width:150px"><button class="btn aktif" data-yon="dik">Dikey</button><button class="btn" data-yon="yatay">Yatay</button></div></div>
+        <div class="bas" style="margin-top:10px"><span style="font-size:13px;font-weight:600">Grafik</span><div class="btn-grup" style="width:200px"><button class="btn aktif" data-tur="kutu">Kutu</button><button class="btn" data-tur="keman">Keman</button></div></div>
+      </div>
+      <div class="blok">
+        <p class="kb">3. Kategori Denetimi</p>
+        <p class="acik">Kutucukla gizleyin/gösterin; oklarla kategorileri elle sıralayın.</p>
+        <div class="kat-liste" id="katListe"></div>
+      </div>
+      <div class="blok">
+        <p class="kb">4. Görünüm</p>
+        <label class="acik" style="display:block;margin-top:0">Dolgu rengi</label>
+        <div class="renkler" id="renkler"></div>
+        <label class="onay"><input type="checkbox" id="noktalar">Veri noktalarını göster</label>
+        <label class="onay"><input type="checkbox" id="aykiri" checked>Aykırı değerleri göster</label>
+        <label class="onay"><input type="checkbox" id="ortGoster">Ortalamayı göster (◆)</label>
+        <div class="bas"><span style="font-size:13px;font-weight:600">Yazı boyutu</span><span class="rozet r-gri" id="ybR">15 px</span></div>
+        <input type="range" id="yb" min="10" max="24" step="1" value="15">
+      </div>
+    </aside>
+
+    <div class="yigin">
+      <section class="kart">
+        <div class="grafik-ust"><div><h2 id="baslik"></h2><div class="acik" id="altBaslik"></div></div><button class="btn birincil" data-tuval="tuval" id="tamBtn">⤢ Tam Ekran</button></div>
+        <div class="tuval" id="tuval"><svg id="svg" viewBox="0 0 900 520"></svg></div>
+      </section>
+      <section class="kart">
+        <h3>Gruplara Göre Özet İstatistikler</h3>
+        <div style="overflow:auto"><table class="veri" id="ozet"></table></div>
+        <div class="icgoru" style="margin-top:12px"><span class="et">KARŞILAŞTIR</span><div id="yorum"></div></div>
+      </section>
+    </div>
+  </div>
+</main>
+<div class="alt-bilgi">İK için İstatistik · Etkileşimli Uygulamalar · Uygulama 06 — <a href="../index.html">Portala dön</a></div>
+
+<script src="../assets/istat.js"></script>
+<script>
+const UCRET = `Departman,Unvan Kademesi,Cinsiyet,Aylık Brüt Ücret (bin TL),Performans Puanı,Kıdem (yıl),Yıllık Eğitim (saat),Devamsızlık (gün)
+Üretim,Uzman,Erkek,37.5,77.7,1.1,20,10
+Satış,Kıdemli Uzman,Kadın,73.3,90.1,6.0,32,8
+Üretim,Kıdemli Uzman,Kadın,49.7,83.3,9.8,42,9
+Finans,Uzman,Erkek,69.6,66.1,9.0,17,8
+İnsan Kaynakları,Uzman Yardımcısı,Kadın,34.4,70.4,5.7,28,8
+Satış,Yönetici,Erkek,76.5,99.3,3.1,32,5
+Satış,Kıdemli Uzman,Kadın,69.3,57.4,6.4,24,4
+Bilgi Teknolojileri,Kıdemli Uzman,Kadın,91.1,90.5,5.1,57,7
+Satış,Yönetici,Erkek,77.5,83.0,5.3,44,5
+Finans,Uzman,Kadın,55.7,79.5,7.3,32,2
+Satış,Uzman,Erkek,56.6,80.1,7.1,42,6
+Bilgi Teknolojileri,Uzman,Kadın,68.8,73.2,2.9,46,2
+Finans,Uzman,Kadın,56.8,61.9,3.7,27,3
+Üretim,Uzman Yardımcısı,Erkek,34.2,79.1,3.0,23,7
+Üretim,Kıdemli Uzman,Erkek,48.2,73.1,2.7,20,5
+Üretim,Uzman Yardımcısı,Kadın,32.4,94.8,4.3,28,9
+İnsan Kaynakları,Uzman,Erkek,50.8,31.6,2.1,18,3
+Bilgi Teknolojileri,Yönetici,Erkek,141.1,85.2,8.5,38,4
+Üretim,Uzman,Kadın,38.2,64.1,1.7,16,5
+İnsan Kaynakları,Kıdemli Uzman,Kadın,62.1,87.8,9.5,35,7
+İnsan Kaynakları,Uzman,Erkek,49.3,68.2,2.9,37,5
+Üretim,Uzman Yardımcısı,Kadın,27.8,39.9,3.7,16,10
+İnsan Kaynakları,Uzman Yardımcısı,Erkek,45.6,74.3,7.9,25,2
+Satış,Uzman,Erkek,49.9,68.0,3.1,26,7
+Bilgi Teknolojileri,Uzman,Erkek,64.2,72.9,0.8,48,2
+İnsan Kaynakları,Yönetici,Kadın,84.0,72.5,11.7,24,0
+Satış,Uzman,Erkek,45.8,70.2,5.7,48,1
+İnsan Kaynakları,Uzman Yardımcısı,Kadın,37.2,78.8,2.1,47,4
+Üretim,Uzman,Kadın,44.4,76.2,6.9,14,6
+Satış,Kıdemli Uzman,Erkek,63.6,69.1,6.7,41,7
+Satış,Uzman Yardımcısı,Kadın,34.2,81.6,7.0,31,6
+İnsan Kaynakları,Uzman Yardımcısı,Kadın,32.0,70.9,3.4,27,7
+Bilgi Teknolojileri,Uzman,Erkek,62.8,66.4,9.8,53,8
+Satış,Uzman Yardımcısı,Erkek,37.6,68.6,3.6,32,6
+Satış,Kıdemli Uzman,Kadın,62.0,77.4,9.1,26,10
+Bilgi Teknolojileri,Uzman Yardımcısı,Erkek,46.7,66.2,0.6,42,4
+Üretim,Uzman,Kadın,42.3,73.3,3.6,23,9
+Bilgi Teknolojileri,Uzman,Erkek,71.3,66.9,4.9,52,2
+Finans,Kıdemli Uzman,Erkek,90.3,76.9,9.5,11,8
+Satış,Kıdemli Uzman,Erkek,68.7,83.7,6.9,28,7
+İnsan Kaynakları,Yönetici,Erkek,86.8,90.0,14.5,32,8
+Üretim,Uzman,Erkek,30.3,77.4,2.8,17,11
+Finans,Kıdemli Uzman,Erkek,67.1,78.0,6.7,4,2
+İnsan Kaynakları,Uzman Yardımcısı,Erkek,37.2,75.5,3.5,26,12
+Üretim,Uzman Yardımcısı,Erkek,33.2,79.7,1.7,36,7
+Üretim,Kıdemli Uzman,Erkek,48.3,95.8,3.3,22,10
+Finans,Uzman,Kadın,45.7,77.1,9.0,28,7
+Satış,Uzman Yardımcısı,Erkek,36.3,55.6,6.7,22,6
+Satış,Kıdemli Uzman,Erkek,74.2,32.1,12.2,33,5
+Finans,Uzman Yardımcısı,Erkek,48.9,79.8,5.1,36,2
+Üretim,Kıdemli Uzman,Erkek,56.7,72.2,6.7,27,8
+Satış,Uzman,Erkek,52.6,73.7,4.2,21,4
+Üretim,Uzman,Kadın,36.9,41.5,5.3,33,8
+Bilgi Teknolojileri,Uzman,Erkek,63.3,63.9,2.2,23,7
+İnsan Kaynakları,Uzman Yardımcısı,Kadın,36.2,63.3,4.4,40,3
+Finans,Uzman,Erkek,53.8,85.0,1.1,21,4
+İnsan Kaynakları,Uzman Yardımcısı,Kadın,35.0,74.4,4.2,44,0
+Üretim,Uzman Yardımcısı,Erkek,33.1,70.0,0.5,20,6
+Finans,Uzman,Erkek,49.1,72.4,6.8,26,3
+Satış,Uzman,Erkek,44.8,71.4,2.0,26,3
+İnsan Kaynakları,Yönetici,Kadın,80.3,83.1,8.3,33,3
+Bilgi Teknolojileri,Uzman,Erkek,55.9,40.8,2.3,54,5
+Bilgi Teknolojileri,Yönetici,Kadın,114.0,68.5,7.6,34,4
+Bilgi Teknolojileri,Kıdemli Uzman,Kadın,88.6,81.7,7.8,31,5
+İnsan Kaynakları,Yönetici,Kadın,70.7,84.9,13.0,23,6
+Finans,Uzman,Erkek,112.2,67.6,9.1,34,2
+Üretim,Uzman Yardımcısı,Erkek,32.8,66.1,2.0,10,7
+Üretim,Kıdemli Uzman,Kadın,57.9,79.6,12.4,22,9
+Finans,Uzman,Kadın,60.0,71.1,4.2,18,2
+İnsan Kaynakları,Kıdemli Uzman,Erkek,55.0,72.8,3.1,36,4
+İnsan Kaynakları,Yönetici,Kadın,75.2,88.1,8.9,43,5
+Bilgi Teknolojileri,Uzman Yardımcısı,Erkek,56.9,70.7,5.3,48,3
+Satış,Uzman,Erkek,51.2,79.5,2.0,23,5
+İnsan Kaynakları,Kıdemli Uzman,Erkek,65.2,72.9,6.0,35,3
+Üretim,Uzman,Erkek,40.8,76.7,3.3,26,6
+Üretim,Uzman Yardımcısı,Erkek,30.6,71.1,2.4,22,7
+Finans,Uzman,Kadın,64.4,78.0,6.1,25,5
+Finans,Uzman,Kadın,53.4,80.9,2.4,37,6
+Satış,Kıdemli Uzman,Kadın,71.4,76.2,8.1,21,3
+Bilgi Teknolojileri,Yönetici,Kadın,119.1,92.5,7.7,42,3
+Satış,Uzman Yardımcısı,Kadın,38.9,64.9,4.3,37,10
+Üretim,Kıdemli Uzman,Kadın,50.0,71.0,3.8,20,11
+Üretim,Uzman,Kadın,39.1,88.9,4.1,29,6
+Üretim,Uzman,Kadın,39.9,74.3,2.8,24,7
+İnsan Kaynakları,Uzman Yardımcısı,Erkek,38.0,64.0,6.4,11,1
+Satış,Kıdemli Uzman,Kadın,58.3,78.0,7.9,32,3
+Üretim,Yönetici,Erkek,84.4,87.1,10.0,0,3
+Üretim,Uzman,Erkek,46.8,82.7,3.0,14,4
+Satış,Kıdemli Uzman,Kadın,56.2,43.2,4.6,26,2
+Satış,Uzman Yardımcısı,Erkek,33.3,57.7,1.4,25,8
+Üretim,Yönetici,Kadın,64.4,89.9,2.1,24,3
+İnsan Kaynakları,Uzman Yardımcısı,Kadın,42.1,63.0,2.2,40,4
+Finans,Uzman Yardımcısı,Kadın,40.8,63.7,4.6,14,2
+Satış,Uzman Yardımcısı,Kadın,38.4,65.0,3.2,38,3
+Bilgi Teknolojileri,Uzman Yardımcısı,Kadın,41.6,65.1,3.7,34,2
+Üretim,Kıdemli Uzman,Erkek,55.7,75.0,4.8,13,8
+Üretim,Uzman Yardımcısı,Kadın,31.2,78.2,2.4,14,6
+Üretim,Uzman Yardımcısı,Erkek,34.0,67.6,2.1,27,4
+Finans,Yönetici,Erkek,104.9,83.4,12.7,19,6
+Satış,Uzman Yardımcısı,Erkek,42.6,84.8,5.3,23,5
+Üretim,Yönetici,Erkek,76.3,68.1,9.6,14,10
+Satış,Yönetici,Kadın,90.0,77.1,3.8,58,4
+Üretim,Kıdemli Uzman,Erkek,99.0,79.7,4.9,9,8
+İnsan Kaynakları,Uzman Yardımcısı,Erkek,35.5,69.5,0.5,34,3
+Üretim,Uzman,Erkek,39.9,77.0,6.5,16,9
+Satış,Uzman,Erkek,55.8,82.0,7.8,38,4
+İnsan Kaynakları,Uzman Yardımcısı,Erkek,45.8,65.1,0.8,38,5
+İnsan Kaynakları,Kıdemli Uzman,Erkek,60.5,79.1,5.9,34,3
+Finans,Uzman,Erkek,49.4,90.2,4.2,31,6
+Üretim,Yönetici,Kadın,79.5,84.9,7.3,17,7
+Üretim,Uzman Yardımcısı,Kadın,34.5,76.3,3.4,6,6
+Üretim,Kıdemli Uzman,Kadın,51.6,62.2,4.1,24,13
+Satış,Uzman Yardımcısı,Kadın,29.9,87.6,1.4,42,6
+Üretim,Uzman,Erkek,43.6,69.9,7.1,3,6
+Satış,Uzman,Erkek,43.8,72.7,2.8,31,4
+Bilgi Teknolojileri,Uzman,Erkek,61.1,70.4,2.2,34,8
+Finans,Uzman,Erkek,64.2,39.1,4.4,28,3
+Üretim,Kıdemli Uzman,Erkek,55.6,84.0,4.2,19,11
+Üretim,Uzman,Erkek,38.6,34.8,4.6,14,7
+Bilgi Teknolojileri,Uzman Yardımcısı,Erkek,47.1,78.3,0.9,35,5
+Finans,Uzman Yardımcısı,Kadın,41.3,69.5,3.5,37,3
+Bilgi Teknolojileri,Uzman Yardımcısı,Kadın,44.1,71.9,2.8,50,2
+Bilgi Teknolojileri,Kıdemli Uzman,Erkek,80.4,67.0,4.5,52,3
+İnsan Kaynakları,Yönetici,Erkek,94.3,68.8,13.0,40,5
+Üretim,Kıdemli Uzman,Erkek,47.8,72.4,6.9,28,7
+Üretim,Kıdemli Uzman,Kadın,53.8,74.0,8.4,21,6
+Finans,Uzman Yardımcısı,Erkek,41.1,71.6,3.6,20,2
+Bilgi Teknolojileri,Uzman,Erkek,75.0,82.5,11.1,38,2
+Satış,Yönetici,Kadın,81.9,78.3,3.9,36,3
+Üretim,Uzman Yardımcısı,Erkek,30.3,81.3,6.4,25,2
+Satış,Uzman,Erkek,49.1,80.3,4.2,28,3
+Bilgi Teknolojileri,Uzman Yardımcısı,Kadın,50.6,88.9,5.0,48,6
+İnsan Kaynakları,Uzman,Kadın,39.7,71.1,2.9,46,6
+Satış,Uzman Yardımcısı,Kadın,31.9,82.1,2.5,40,6
+Üretim,Uzman Yardımcısı,Erkek,32.6,77.1,3.1,40,5
+Üretim,Uzman Yardımcısı,Erkek,35.8,67.7,0.3,0,6
+Üretim,Uzman,Kadın,31.8,84.3,4.4,30,6
+Bilgi Teknolojileri,Uzman,Kadın,57.4,61.7,1.9,50,3
+Üretim,Uzman Yardımcısı,Kadın,53.6,84.5,1.7,16,7
+Üretim,Yönetici,Kadın,84.7,71.4,10.4,12,11
+Satış,Uzman Yardımcısı,Erkek,38.5,70.0,3.8,47,9
+Üretim,Yönetici,Kadın,68.2,36.1,4.5,29,10
+Satış,Uzman,Kadın,49.7,77.5,9.6,36,4
+Satış,Kıdemli Uzman,Erkek,52.5,60.8,7.6,31,1
+Bilgi Teknolojileri,Uzman Yardımcısı,Erkek,52.6,66.7,2.5,46,7
+Satış,Uzman Yardımcısı,Kadın,37.6,50.1,1.3,29,1
+Üretim,Uzman Yardımcısı,Kadın,27.3,74.0,2.1,20,5
+İnsan Kaynakları,Uzman Yardımcısı,Erkek,38.3,71.7,4.7,22,6
+Finans,Uzman,Kadın,49.3,60.6,6.4,32,4
+Üretim,Uzman,Erkek,36.9,90.5,5.7,20,11`;
+const EGITIM = `Program,Lokasyon,Ön Test Puanı,Son Test Puanı,Puan Artışı,Katılımcı Memnuniyeti (1-5)
+Kontrol grubu,Genel Müdürlük,65.9,66.3,0.4,
+Kontrol grubu,Genel Müdürlük,36.1,28.9,-7.1,
+Kontrol grubu,Fabrika,54.6,58.7,4.1,
+Kontrol grubu,Genel Müdürlük,69.1,61.6,-7.5,
+Kontrol grubu,Genel Müdürlük,39.9,43.3,3.4,
+Kontrol grubu,Fabrika,59.7,56.2,-3.5,
+Kontrol grubu,Genel Müdürlük,66.5,74.8,8.2,
+Kontrol grubu,Fabrika,54.3,60.1,5.9,
+Kontrol grubu,Fabrika,60.2,55.2,-4.9,
+Kontrol grubu,Genel Müdürlük,48.9,40.0,-8.9,
+Kontrol grubu,Fabrika,60.8,52.9,-7.9,
+Kontrol grubu,Genel Müdürlük,48.4,50.7,2.4,
+Kontrol grubu,Fabrika,54.1,52.3,-1.8,
+Kontrol grubu,Genel Müdürlük,59.9,57.0,-2.9,
+Kontrol grubu,Genel Müdürlük,49.6,51.8,2.2,
+Kontrol grubu,Genel Müdürlük,74.2,75.1,0.8,
+Kontrol grubu,Genel Müdürlük,59.8,53.9,-5.9,
+Kontrol grubu,Genel Müdürlük,69.1,66.1,-3.0,
+Kontrol grubu,Fabrika,75.6,68.0,-7.6,
+Kontrol grubu,Genel Müdürlük,55.8,51.6,-4.2,
+Kontrol grubu,Fabrika,54.7,53.4,-1.3,
+Kontrol grubu,Fabrika,56.9,63.0,6.1,
+Kontrol grubu,Genel Müdürlük,82.7,87.0,4.4,
+Kontrol grubu,Fabrika,48.0,44.7,-3.3,
+Sınıf içi eğitim,Fabrika,41.0,55.3,14.3,3.3
+Sınıf içi eğitim,Fabrika,50.4,63.9,13.5,4.4
+Sınıf içi eğitim,Genel Müdürlük,39.1,44.6,5.4,4.3
+Sınıf içi eğitim,Genel Müdürlük,66.0,74.6,8.6,4.0
+Sınıf içi eğitim,Genel Müdürlük,75.8,88.2,12.4,4.6
+Sınıf içi eğitim,Genel Müdürlük,43.0,57.2,14.3,4.4
+Sınıf içi eğitim,Fabrika,67.4,72.1,4.7,3.7
+Sınıf içi eğitim,Genel Müdürlük,63.6,80.3,16.7,3.7
+Sınıf içi eğitim,Genel Müdürlük,53.6,63.1,9.5,5.0
+Sınıf içi eğitim,Genel Müdürlük,69.4,79.4,10.0,3.9
+Sınıf içi eğitim,Genel Müdürlük,69.0,68.4,-0.6,4.4
+Sınıf içi eğitim,Fabrika,65.9,80.4,14.6,3.6
+Sınıf içi eğitim,Fabrika,60.2,63.2,3.1,3.5
+Sınıf içi eğitim,Fabrika,50.4,68.3,17.9,5.0
+Sınıf içi eğitim,Fabrika,58.0,69.0,10.9,4.5
+Sınıf içi eğitim,Genel Müdürlük,62.4,60.2,-2.2,3.7
+Sınıf içi eğitim,Genel Müdürlük,42.5,40.0,-2.5,4.6
+Sınıf içi eğitim,Fabrika,73.6,95.0,21.4,4.1
+Sınıf içi eğitim,Genel Müdürlük,53.7,59.3,5.6,2.7
+Sınıf içi eğitim,Genel Müdürlük,55.1,61.3,6.2,3.6
+Sınıf içi eğitim,Fabrika,57.0,65.3,8.3,4.2
+Sınıf içi eğitim,Genel Müdürlük,76.6,91.3,14.7,4.0
+Sınıf içi eğitim,Fabrika,50.0,54.1,4.1,4.5
+Sınıf içi eğitim,Fabrika,58.3,72.0,13.7,3.8
+E-öğrenme,Genel Müdürlük,60.3,52.3,-8.0,2.9
+E-öğrenme,Fabrika,53.7,57.1,3.4,4.4
+E-öğrenme,Genel Müdürlük,49.9,57.8,7.9,3.6
+E-öğrenme,Genel Müdürlük,62.2,74.9,12.7,4.4
+E-öğrenme,Fabrika,40.9,43.0,2.1,3.2
+E-öğrenme,Fabrika,50.2,51.8,1.6,4.0
+E-öğrenme,Fabrika,51.4,52.9,1.5,3.6
+E-öğrenme,Genel Müdürlük,47.1,43.3,-3.8,3.3
+E-öğrenme,Fabrika,67.7,80.6,13.0,3.6
+E-öğrenme,Genel Müdürlük,51.9,57.8,5.8,2.7
+E-öğrenme,Fabrika,59.1,73.6,14.6,2.5
+E-öğrenme,Fabrika,35.9,36.3,0.4,2.8
+E-öğrenme,Genel Müdürlük,50.3,54.0,3.7,4.1
+E-öğrenme,Genel Müdürlük,48.2,48.8,0.6,3.1
+E-öğrenme,Fabrika,51.0,46.9,-4.1,3.5
+E-öğrenme,Fabrika,67.3,83.6,16.4,2.5
+E-öğrenme,Fabrika,73.1,83.7,10.6,4.1
+E-öğrenme,Fabrika,63.8,74.9,11.0,4.1
+E-öğrenme,Fabrika,51.3,53.0,1.7,3.2
+E-öğrenme,Fabrika,72.7,70.4,-2.3,3.7
+E-öğrenme,Genel Müdürlük,57.2,62.0,4.8,3.7
+E-öğrenme,Genel Müdürlük,63.5,66.6,3.1,3.0
+E-öğrenme,Fabrika,62.8,71.6,8.9,4.0
+E-öğrenme,Genel Müdürlük,60.4,72.1,11.8,4.3
+Karma (blended),Genel Müdürlük,70.9,79.4,8.5,3.5
+Karma (blended),Fabrika,40.4,56.7,16.3,3.6
+Karma (blended),Fabrika,64.7,73.8,9.0,4.8
+Karma (blended),Fabrika,59.5,76.1,16.6,3.6
+Karma (blended),Genel Müdürlük,33.1,43.7,10.5,4.5
+Karma (blended),Genel Müdürlük,64.1,81.5,17.3,4.3
+Karma (blended),Genel Müdürlük,60.2,73.3,13.2,4.4
+Karma (blended),Fabrika,68.1,83.8,15.8,4.6
+Karma (blended),Fabrika,50.0,54.7,4.8,4.9
+Karma (blended),Genel Müdürlük,54.1,67.2,13.0,4.4
+Karma (blended),Fabrika,60.7,74.3,13.6,3.5
+Karma (blended),Fabrika,56.6,73.5,16.9,4.4
+Karma (blended),Fabrika,68.8,87.6,18.7,3.6
+Karma (blended),Fabrika,61.9,72.5,10.6,5.0
+Karma (blended),Fabrika,52.0,57.9,5.9,3.3
+Karma (blended),Genel Müdürlük,52.9,64.3,11.5,3.1
+Karma (blended),Fabrika,57.7,78.3,20.7,3.9
+Karma (blended),Genel Müdürlük,53.5,70.9,17.4,3.9
+Karma (blended),Genel Müdürlük,49.5,71.4,21.9,4.7
+Karma (blended),Fabrika,81.2,95.1,13.9,4.3
+Karma (blended),Fabrika,59.4,82.0,22.6,4.8
+Karma (blended),Genel Müdürlük,49.8,66.0,16.2,4.6
+Karma (blended),Fabrika,62.7,80.0,17.3,4.2
+Karma (blended),Genel Müdürlük,64.4,73.1,8.6,3.6`;
+
+(() => {
+  const {$, el, f} = I;
+  const RENKLER = ['#5b5bd6', '#0b4a8b', '#c8202e', '#14966f', '#d97706', '#0891b2', '#9ca3af'];
+  let ds = null, hedef = null, grup = null, yon = 'dik', tur = 'kutu', renk = RENKLER[0], elle = [], gorunur = new Set();
+  $('renkler').innerHTML = RENKLER.map((r, i) => `<button style="background:${r}" data-r="${r}" class="${i ? '' : 'aktif'}"></button>`).join('');
+  $('renkler').addEventListener('click', e => { if (!e.target.dataset.r) return; renk = e.target.dataset.r; $('renkler').querySelectorAll('button').forEach(b => b.classList.toggle('aktif', b === e.target)); ciz(); });
+
+  function yukle(d, acik, vH, vG) {
+    ds = d; if (!d.sayisal.length || !d.kategorik.length) { alert('Veride en az bir sayısal ve bir kategorik sütun olmalı.'); return; }
+    $('hedef').innerHTML = d.sayisal.map(k => `<option>${k}</option>`).join('');
+    $('grup').innerHTML = d.kategorik.map(k => `<option>${k}</option>`).join('');
+    hedef = vH && d.sayisal.includes(vH) ? vH : d.sayisal[0]; grup = vG && d.kategorik.includes(vG) ? vG : d.kategorik[0];
+    $('hedef').value = hedef; $('grup').value = grup; $('veriAcik').innerHTML = acik; grupHazirla(); ciz();
+  }
+  const DOGAL = {'Unvan Kademesi': ['Uzman Yardımcısı', 'Uzman', 'Kıdemli Uzman', 'Yönetici'], 'Program': ['Kontrol grubu', 'Sınıf içi eğitim', 'E-öğrenme', 'Karma (blended)']};
+  function grupHazirla() { const g = [...new Set(ds.veri.map(r => r[grup]).filter(v => v !== '' && v != null))].map(String); gorunur = new Set(g);
+    if (DOGAL[grup] && g.every(x => DOGAL[grup].includes(x))) { elle = DOGAL[grup].filter(x => g.includes(x)); $('sira').value = 'elle'; } else { elle = g.slice(); if ($('sira').value === 'elle') $('sira').value = 'az'; } }
+  function gruplar() {
+    const v = {}; ds.veri.forEach(r => { const k = String(r[grup]), x = r[hedef]; if (r[grup] === '' || r[grup] == null || x == null || !isFinite(x)) return; (v[k] = v[k] || []).push(x); });
+    let k = elle.filter(g => gorunur.has(g) && v[g]); const s = $('sira').value;
+    if (s === 'az') k.sort((a, b) => a.localeCompare(b, 'tr')); else if (s === 'za') k.sort((a, b) => b.localeCompare(a, 'tr'));
+    else if (s === 'medArt') k.sort((a, b) => I.kantil(v[a], .5) - I.kantil(v[b], .5)); else if (s === 'medAzl') k.sort((a, b) => I.kantil(v[b], .5) - I.kantil(v[a], .5));
+    return {k, v};
+  }
+  function liste() {
+    const {k} = gruplar(); const sirali = $('sira').value === 'elle' ? elle : k.concat(elle.filter(g => !k.includes(g)));
+    $('katListe').innerHTML = sirali.map(c => `<div class="kat-oge ${gorunur.has(c) ? '' : 'kapali'}"><input type="checkbox" data-c="${c}" ${gorunur.has(c) ? 'checked' : ''}><span>${c}</span><button data-yukari="${c}">▲</button><button data-asagi="${c}">▼</button></div>`).join('');
+  }
+  $('katListe').addEventListener('click', e => {
+    const d = e.target.dataset;
+    if (e.target.type === 'checkbox') { e.target.checked ? gorunur.add(d.c) : gorunur.delete(d.c); ciz(); return; }
+    const kat = d.yukari || d.asagi; if (!kat) return;
+    if ($('sira').value !== 'elle') { const {k} = gruplar(); elle = k.concat(elle.filter(g => !k.includes(g))); $('sira').value = 'elle'; }
+    const i = elle.indexOf(kat), j = d.yukari ? i - 1 : i + 1; if (j < 0 || j >= elle.length) return; [elle[i], elle[j]] = [elle[j], elle[i]]; ciz();
+  });
+
+  function kde(v, xs, h) { return xs.map(x => v.reduce((t, a) => t + I.phi((x - a) / h), 0) / (v.length * h)); }
+
+  function ciz() {
+    liste(); const {k, v} = gruplar(); const svg = $('svg'); svg.innerHTML = ''; const fs = +$('yb').value;
+    $('baslik').textContent = `${hedef} — ${grup} gruplarına göre`; $('altBaslik').textContent = `${k.length} grup · ${k.reduce((t, g) => t + v[g].length, 0)} gözlem`;
+    if (!k.length) return;
+    const W = 900, H = 520, dik = yon === 'dik';
+    const L = dik ? 80 : 150, R = 24, T = 24, B = dik ? 80 : 70;
+    const tum = k.flatMap(g => v[g]); const vt = I.tiklerKapsa(Math.min(...tum), Math.max(...tum), 8);
+    const deg = dik ? I.olcek(vt[0], vt[vt.length - 1], H - B, T) : I.olcek(vt[0], vt[vt.length - 1], L, W - R);
+    const bant = (dik ? (W - L - R) : (H - T - B)) / k.length, merkez = i => (dik ? L : T) + bant * (i + .5), gen = Math.min(120, bant * .5);
+    // eksen
+    const g0 = el('g', {}, svg);
+    vt.forEach(t => { const p = deg(t);
+      if (dik) { el('line', {x1: L, x2: W - R, y1: p, y2: p, stroke: '#ececec'}, g0); el('text', {x: L - 8, y: p + fs / 3, 'text-anchor': 'end', 'font-size': fs * .8, fill: '#555'}, g0, f(t, I.ondalik(vt))); }
+      else { el('line', {y1: T, y2: H - B, x1: p, x2: p, stroke: '#ececec'}, g0); el('text', {x: p, y: H - B + fs + 4, 'text-anchor': 'middle', 'font-size': fs * .8, fill: '#555'}, g0, f(t, I.ondalik(vt))); } });
+    el('line', dik ? {x1: L, x2: L, y1: T, y2: H - B, stroke: '#888'} : {x1: L, x2: W - R, y1: H - B, y2: H - B, stroke: '#888'}, g0);
+    el('line', dik ? {x1: L, x2: W - R, y1: H - B, y2: H - B, stroke: '#888'} : {x1: L, x2: L, y1: T, y2: H - B, stroke: '#888'}, g0);
+    const etH = dik ? {x: 18, y: (T + H - B) / 2, transform: `rotate(-90 18 ${(T + H - B) / 2})`} : {x: (L + W - R) / 2, y: H - 12};
+    el('text', {...etH, 'text-anchor': 'middle', 'font-size': fs, 'font-weight': 700, fill: '#222'}, g0, hedef);
+    const etG = dik ? {x: (L + W - R) / 2, y: H - 14} : {x: 16, y: (T + H - B) / 2, transform: `rotate(-90 16 ${(T + H - B) / 2})`};
+    el('text', {...etG, 'text-anchor': 'middle', 'font-size': fs, 'font-weight': 700, fill: '#222'}, g0, grup);
+    const P = (c, d) => dik ? {x: c, y: d} : {x: d, y: c}; // c: grup ekseni, d: değer ekseni
+    k.forEach((g, i) => {
+      const o = I.ozet5(v[g]), c = merkez(i);
+      const ad = P(c, 0); el('text', dik ? {x: c, y: H - B + fs + 6, 'text-anchor': 'middle', 'font-size': fs * .9, fill: '#222'} : {x: L - 8, y: c + fs / 3, 'text-anchor': 'end', 'font-size': fs * .9, fill: '#222'}, svg, g);
+      if (tur === 'keman') {
+        const xs = []; const lo = Math.max(vt[0], o.min - (o.max - o.min) * .1), hi = Math.min(vt[vt.length - 1], o.max + (o.max - o.min) * .1); for (let j = 0; j <= 60; j++) xs.push(lo + (hi - lo) * j / 60);
+        const h = 1.06 * (o.sd || 1) * Math.pow(o.n, -.2) || 1; const ds2 = kde(v[g], xs, h); const mx = Math.max(...ds2);
+        let d = ''; xs.forEach((x, j) => { const p = P(c + ds2[j] / mx * gen * .9, deg(x)); d += (j ? 'L' : 'M') + p.x + ',' + p.y; });
+        for (let j = xs.length - 1; j >= 0; j--) { const p = P(c - ds2[j] / mx * gen * .9, deg(xs[j])); d += 'L' + p.x + ',' + p.y; }
+        el('path', {d: d + 'Z', fill: renk, 'fill-opacity': .35, stroke: renk, 'stroke-width': 1.5}, svg);
+        const a = P(c - 8, deg(o.q1)), b = P(c + 8, deg(o.q3));
+        el('rect', {x: Math.min(a.x, b.x), y: Math.min(a.y, b.y), width: Math.abs(b.x - a.x), height: Math.abs(b.y - a.y), fill: '#1d2433'}, svg);
+        const m = P(c, deg(o.med)); el('circle', {cx: m.x, cy: m.y, r: 4, fill: '#fff'}, svg);
+      } else {
+        const w1 = P(c, deg(o.bigMin)), w2 = P(c, deg(o.q1)), w3 = P(c, deg(o.q3)), w4 = P(c, deg(o.bigMax));
+        el('line', {x1: w1.x, y1: w1.y, x2: w2.x, y2: w2.y, stroke: '#333', 'stroke-width': 1.5}, svg);
+        el('line', {x1: w3.x, y1: w3.y, x2: w4.x, y2: w4.y, stroke: '#333', 'stroke-width': 1.5}, svg);
+        [o.bigMin, o.bigMax].forEach(val => { const a = P(c - gen / 4, deg(val)), b = P(c + gen / 4, deg(val)); el('line', {x1: a.x, y1: a.y, x2: b.x, y2: b.y, stroke: '#333', 'stroke-width': 1.5}, svg); });
+        const a = P(c - gen / 2, deg(o.q1)), b = P(c + gen / 2, deg(o.q3));
+        const r = el('rect', {x: Math.min(a.x, b.x), y: Math.min(a.y, b.y), width: Math.abs(b.x - a.x), height: Math.abs(b.y - a.y), fill: renk, 'fill-opacity': .85, stroke: '#1d2433', 'stroke-width': 1.2}, svg);
+        el('title', {}, r, `${g}\nn=${o.n}\nMin=${f(o.min, 2)} Q1=${f(o.q1, 2)} Medyan=${f(o.med, 2)} Q3=${f(o.q3, 2)} Maks=${f(o.max, 2)}`);
+        const m1 = P(c - gen / 2, deg(o.med)), m2 = P(c + gen / 2, deg(o.med)); el('line', {x1: m1.x, y1: m1.y, x2: m2.x, y2: m2.y, stroke: '#111', 'stroke-width': 2.5}, svg);
+        if ($('aykiri').checked) o.aykiri.forEach(val => { const p = P(c, deg(val)); el('circle', {cx: p.x, cy: p.y, r: 4.5, fill: '#c8202e'}, svg); });
+      }
+      if ($('noktalar').checked) v[g].forEach(val => { const p = P(c + (Math.random() - .5) * gen * .7, deg(val)); el('circle', {cx: p.x, cy: p.y, r: 2.6, fill: '#111', 'fill-opacity': .45}, svg); });
+      if ($('ortGoster').checked) { const p = P(c, deg(o.ort)); el('path', {d: `M${p.x},${p.y - 7} l7,7 l-7,7 l-7,-7z`, fill: '#f59e0b', stroke: '#fff'}, svg); }
+    });
+    // özet tablo
+    const oz = k.map(g => [g, I.ozet5(v[g])]);
+    $('ozet').innerHTML = `<thead><tr><th>${grup}</th><th>n</th><th>Ortalama</th><th>Std. sapma</th><th>Min</th><th>Q1</th><th>Medyan</th><th>Q3</th><th>Maks</th><th>IQR</th><th>Aykırı</th></tr></thead><tbody>` +
+      oz.map(([g, o]) => `<tr><td><b>${g}</b></td><td>${o.n}</td><td>${f(o.ort, 2)}</td><td>${f(o.sd, 2)}</td><td>${f(o.min, 2)}</td><td>${f(o.q1, 2)}</td><td>${f(o.med, 2)}</td><td>${f(o.q3, 2)}</td><td>${f(o.max, 2)}</td><td>${f(o.iqr, 2)}</td><td>${o.aykiri.length}</td></tr>`).join('') + '</tbody>';
+    if (oz.length > 1) { const s = oz.slice().sort((a, b) => b[1].med - a[1].med), y = oz.slice().sort((a, b) => b[1].iqr - a[1].iqr);
+      const ortust = oz.some(([, a]) => oz.some(([, b]) => a !== b && a.q1 <= b.q3 && b.q1 <= a.q3));
+      $('yorum').innerHTML = `<b>Merkez:</b> En yüksek medyan <b>${s[0][0]}</b> (${f(s[0][1].med, 2)}), en düşük <b>${s[s.length - 1][0]}</b> (${f(s[s.length - 1][1].med, 2)}). <b>Yayılım:</b> En geniş IQR <b>${y[0][0]}</b> (${f(y[0][1].iqr, 2)}). ` +
+        (ortust ? 'Bazı grupların kutuları (orta %50) <b>örtüşüyor</b>; bu gruplar arasındaki fark o kadar belirgin olmayabilir.' : 'Kutular <b>örtüşmüyor</b>: gruplar arasında belirgin bir konum farkı var.') +
+        ' Karşılaştırmada her zaman <b>şekil, merkez, yayılım ve aykırı değerleri</b> birlikte yorumlayın.';
+    } else $('yorum').textContent = 'Karşılaştırma için en az iki grup gösterin.';
+  }
+  $('hedef').addEventListener('change', e => { hedef = e.target.value; ciz(); });
+  $('grup').addEventListener('change', e => { grup = e.target.value; grupHazirla(); ciz(); });
+  $('sira').addEventListener('change', ciz);
+  document.querySelectorAll('[data-yon]').forEach(b => b.addEventListener('click', () => { yon = b.dataset.yon; document.querySelectorAll('[data-yon]').forEach(x => x.classList.toggle('aktif', x === b)); ciz(); }));
+  document.querySelectorAll('[data-tur]').forEach(b => b.addEventListener('click', () => { tur = b.dataset.tur; document.querySelectorAll('[data-tur]').forEach(x => x.classList.toggle('aktif', x === b)); ciz(); }));
+  ['noktalar', 'aykiri', 'ortGoster'].forEach(id => $(id).addEventListener('change', ciz));
+  $('yb').addEventListener('input', () => { $('ybR').textContent = $('yb').value + ' px'; ciz(); });
+  document.querySelectorAll('[data-dis]').forEach(b => b.addEventListener('click', () => I.svgIndir($('svg'), `${hedef}-${grup}`, b.dataset.dis)));
+  $('tamBtn').addEventListener('click', () => { const t = $('tuval'); document.fullscreenElement ? document.exitFullscreen() : t.requestFullscreen && t.requestFullscreen(); });
+  $('ucretBtn').addEventListener('click', () => yukle(I.csvOku(UCRET), '<b>Ücret ve performans:</b> 150 çalışanın departman, unvan kademesi, cinsiyet, aylık brüt ücret (bin TL), performans puanı, kıdem, yıllık eğitim saati ve devamsızlık günü (öğretim amaçlı kurgusal İKBS verisi). <i>Deneyin:</i> ücreti unvan kademesine ya da cinsiyete göre karşılaştırın (ücret eşitliği analizi).', 'Aylık Brüt Ücret (bin TL)', 'Departman'));
+  $('egitimBtn').addEventListener('click', () => yukle(I.csvOku(EGITIM), '<b>Eğitim programı etkinliği:</b> Bir satış becerileri eğitiminde dört gruptaki 96 çalışanın ön test ve son test puanları, puan artışı ve katılımcı memnuniyeti (Kirkpatrick 1. ve 2. düzey; öğretim amaçlı kurgusal veri). <i>Deneyin:</i> puan artışını programa göre karşılaştırın.', 'Puan Artışı', 'Program'));
+  I.birakmaAlani($('birak'), $('dosya'), async dosya => { try { yukle(await I.dosyaOku(dosya), `<b>Yüklenen dosya:</b> ${dosya.name}`); } catch (e) { alert('Dosya okunamadı: ' + e.message); } });
+  $('ucretBtn').click();
+})();
+</script>
+</body>
+</html>
